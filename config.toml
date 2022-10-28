@@ -1,0 +1,141 @@
+######################## default configuration ####################
+baseURL = "https://akivajackson.com"
+title = "Akiva Jackson"
+theme = "twenty-twenty-hugo" #"showfolio" # "twenty-twenty-hugo"
+languageName = "En"
+languageCode = "en-us"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "10"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = [] # disable language from here
+# google analytics
+googleAnalytics = "" # example : UA-123-45
+
+
+############################## Output ###############################
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+author = "author"
+
+############################## navigation ###############################
+
+# main menu
+[[menu.main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[menu.main]]
+name = "Tutoring"
+URL = "tutoring/"
+weight = 5
+
+[[menu.main]]
+name = "About"
+URL = "about/"
+weight = 2
+
+[[menu.main]]
+name = "Blog"
+URL = "blog/"
+weight = 3
+
+[[menu.main]]
+name = "Contact"
+URL = "contact/"
+weight = 4
+
+[[menu.main]]
+name = "CV"
+URL = "sample-page/"
+weight = 5
+
+# [[menu.main]]
+# name = "CV"
+# URL = "cv/"
+# weight = 6
+
+# only desktop menu
+[[menu.desktop]]
+name = "Contact"
+URL = "contact/"
+weight = 1
+
+[[menu.desktop]]
+name = "Tutoring"
+URL = "tutoring/"
+weight = 1
+
+
+#################### default parameters ################################
+[params]
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+
+# favicon
+[params.favicon]
+favicon = "images/favicon.png"
+
+# cookies
+[params.cookies]
+enable = true
+expire_days = 2
+
+# banner
+[params.banner]
+heading = "### [(Looking for my Tutoring Site?)](/tutoring) \n # Akiva Jackson's Portfolio"
+# image = "images/2020-landscape-1-2.png"
+image = "images/headshot.png"
+
+# blog
+[params.blog]
+heading = "Read about all my fun data explorations and gratuitous overthinking."
+
+# call to action
+[params.call_to_action]
+enable = true
+title = "Contact me."
+content = "Wanna hire me to design your website, do your data analysis, or chat about yiddish?"
+button_label = "Contact Me"
+button_url = "contact/"
+
+# gallery
+[params.gallery]
+enable = true
+
+[[params.gallery.gallery_item]]
+image = "images/2020-square-2.png"
+
+[[params.gallery.gallery_item]]
+image = "images/2020-square-1.png"
+
+
+# footer
+# [params.footer]   # commented out the footer entirely because I couldn't figure out how to just comment out the address and hours
+title = "About This Site"
+content = "This may be a good place to introduce yourself and your site or include some credits."
+# address = "123 Main Street <br> New York, NY 10001"
+# hours = "Monday–Friday: 9:00AM–5:00PM <br> Saturday & Sunday: 11:00AM–3:00PM"
+copyright = "Copyright &copy; 2021 a hugo theme by [themefisher](https://themefisher.com/hugo-themes/) ported from [WordPress Twenty Twenty](https://github.com/WordPress/twentytwenty)"
+
+############################# social site ########################
+[params.social]
+# yelp = "#"
+# facebook = "#"
+# twitter = "#"
+instagram = "https://www.instagram.com/akivarjackson/"
+email = "akivajackson@gmail.com"
+linkedin = "https://www.linkedin.com/in/akiva-jackson/"
