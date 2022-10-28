@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = "https://akivajackson.com"
 title = "Akiva Jackson"
-theme = "twenty-twenty-hugo" #"showfolio" # "twenty-twenty-hugo"
+theme = "twenty-twenty-hugo" #"showfolio" 
 languageName = "En"
 languageCode = "en-us"
 # post pagination
@@ -102,7 +102,7 @@ image = "images/headshot.png"
 
 # blog
 [params.blog]
-heading = "Read about all my fun data explorations and gratuitous overthinking."
+heading = "Read about all my fun data explorations and gratuitous overthinking. "
 
 # call to action
 [params.call_to_action]
