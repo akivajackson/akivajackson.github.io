@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://akivajackson.com"
+baseURL = "https://akivajackson.github.io"
 title = "Akiva Jackson"
 theme = "twenty-twenty-hugo" #"showfolio" # "twenty-twenty-hugo"
 languageName = "En"
