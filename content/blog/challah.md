@@ -14,6 +14,7 @@ draft: false
 ---
 
 ### Challah (3 loaves)
+
 **Ingredients**  <br><br>
 1 Tbs yeast  
 1.5 C warm water  
