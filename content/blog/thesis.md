@@ -8,7 +8,7 @@ author : ["Akiva"]
 categories: ["literary-criticism"]
 tags: ["literature", "research"]
 # meta description
-description: "This is meta description"
+description: "Link and Description!"
 # save as draft
 draft: false
 ---

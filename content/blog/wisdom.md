@@ -8,7 +8,7 @@ author : ["Akiva"]
 categories: ["Overthinking"]
 tags: ["medical", "statistics"]
 # meta description
-description: "This is meta description"
+description: "My Process"
 # save as draft
 draft: false
 ---

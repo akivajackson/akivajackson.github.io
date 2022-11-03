@@ -1,17 +1,21 @@
 ---
 title: "My Mother's Challah Recipe"
 date: 2022-10-25
-image : "images/2020-three-quarters-2.png"
+image : "/images/challah.jpg"
 # author
 author : ["Akiva"]
 # categories
 categories: ["cooking"]
 tags: ["cooking", "bread"]
 # meta description
-description: "This is meta description"
+description: "The Best Challah You'll Ever Tastes"
 # save as draft
 draft: false
 ---
+<!-- ![](/images/challah.jpg) -->
+The best challah you'll ever taste.[^1] 
+
+[^1]: Actually, I also really love this [vegan challah](https://domesticgothess.com/blog/2020/05/07/vegan-challah/). But don't tell my mother!
 
 ### Challah (3 loaves)
 

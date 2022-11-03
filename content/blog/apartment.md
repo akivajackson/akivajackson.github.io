@@ -2,6 +2,7 @@
 title: "Apartment Search Spreadsheet"
 date: 2022-11-03T15:02:00-04:00
 draft: false
+image: "images/apartments.png"
 # description
 description: "Automatically Calculate Distances to Addresses"
 ---
