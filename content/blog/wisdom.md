@@ -55,6 +55,8 @@ At the top are all the risks I could find[^4] of removal, and below are all the 
 
 <!-- for some reason the shortcode d-oesn't work but the html does -->
 <!-- {{< gsheets "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGpmDUxSIipW0g4-bTmhmPVGB5j04w_BWp6xyyFyMFKe7DDn9116WPqy3S_5JKNU857jOS30JzZs7f/pubhtml?widget=true&amp;headers=false" >}} -->
+
+<!-- have to click share/publish on the google doc and just copy in here -->
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQGpmDUxSIipW0g4-bTmhmPVGB5j04w_BWp6xyyFyMFKe7DDn9116WPqy3S_5JKNU857jOS30JzZs7f/pubhtml?widget=true&amp;headers=false" width="200%" height="728"></iframe>
 
 Seems pretty clear that I should keep them. But then I was looking at prices of dental procedures after I get kicked off my parent's insurance next year, and a conservative 40% likelihood of getting them taken out later,[^5] multiplied by the cost if my insurance has double the current copay(which seems likely), raises the cost of keeping them by $1800 * 2 * .4 = $1440, which tips the scale in favor of taking them out. 
