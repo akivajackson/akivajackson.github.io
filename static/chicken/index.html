@@ -18,41 +18,59 @@
             height: 100%;
             object-fit: cover;
         }
+
+        #counter {
+            display: none;
+            text-align: center;
+            font-size: 2em;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: black;
+            margin: 0;
+            border: 10px solid black;
+        }
     </style>
 </head>
 <body>
 
-<div class="video-container">
-<!--    <button id="playButton">Play/Pause</button>-->
-<!--    <video autoplay loop onclick="this.play()">-->
-    <video autoplay loop muted onclick="document.getElementById('audio').play()">
-        <source src="chicken-on-a-raft-new.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
+
+<p id="counter">You have been on a raft for <span id="seconds">0</span> seconds.</p>
+<div class="video-container" id="container">
+    <img id="startImage" src="chicken-click.jpg" onclick="startVideo()" style="width:100%; ">
 </div>
-<!--<div class="video-container">-->
-<!--    <video autoplay loop muted>-->
-<!--        <source src="chicken-on-a-raft.mp4" type="video/mp4">-->
-<!--        Your browser does not support HTML5 video.-->
-<!--    </video>-->
-<!--</div>-->
+
+
 <audio src="chicken-on-a-raft.mp3" id="audio">
 <p>If you are reading this, it is because your browser does not support the audio element.</p>
 </audio>
 
-<!--<embed src="chicken-on-a-raft.mp3" width="180" height="90" loop="false" autostart="true" hidden="true" />-->
+
 <script>
-    // var video = document.getElementById('video');
-    // var button = document.getElementById('playButton');
-    //
-    // button.addEventListener('click', function() {
-    //     if (video.paused) {
-    //         video.play();
-    //     } else {
-    //         video.pause();
-    //     }
-    // })
-    onclick="this.paused ? this.play() : this.pause();";
+    var counter = document.getElementById('seconds');
+    var count = 0;
+    var interval;
+
+    function startVideo() {
+        var container = document.getElementById('container');
+        var image = document.getElementById('startImage');
+        container.removeChild(image);
+
+        var video = document.createElement('video');
+        video.setAttribute('autoplay', '');
+        video.setAttribute('loop', '');
+        var source = document.createElement('source');
+        source.setAttribute('src', 'chicken-on-a-raft-new.mp4');
+        source.setAttribute('type', 'video/mp4');
+        video.appendChild(source);
+        container.appendChild(video);
+
+        document.getElementById('counter').style.display = 'block';
+
+        interval = setInterval(function() {
+            count++;
+            counter.innerText = count;
+        }, 1000);
+    }
 </script>
 
 </body>
