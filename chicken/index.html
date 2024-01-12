@@ -19,7 +19,7 @@
             object-fit: cover;
         }
 
-        #counter {
+        #counter-container {
             display: none;
             text-align: center;
             font-size: 2em;
@@ -28,19 +28,28 @@
             background-color: black;
             margin: 0;
             border: 10px solid black;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-
-<p id="counter">You have been on a raft for <span id="seconds">0</span> seconds.</p>
 <div class="video-container" id="container">
     <img id="startImage" src="chicken-click.jpg" onclick="startVideo()" style="width:100%; ">
 </div>
 
+<div id="counter-container"><p id="counter" style="font-size: 20px">You have been on a raft for <span id="seconds">0</span> seconds.</p>
+    <p style="font-size: 15px; margin-top: 5px;">Click the video to change the song</p></div>
 
-<audio src="chicken-on-a-raft.mp3" id="audio">
+
+<audio src="chicken-sailors-ode.mp3" id="audio">
 <p>If you are reading this, it is because your browser does not support the audio element.</p>
 </audio>
 
@@ -49,6 +58,9 @@
     var counter = document.getElementById('seconds');
     var count = 0;
     var interval;
+    var songs = ['chicken-sailors-ode.mp3', 'chicken-symphony.mp3', 'chicken-on-a-raft.mp3', 'chicken-hallelujah.mp3', ]
+    var currentSongIndex = 0;
+
 
     function startVideo() {
         var container = document.getElementById('container');
@@ -58,13 +70,28 @@
         var video = document.createElement('video');
         video.setAttribute('autoplay', '');
         video.setAttribute('loop', '');
+        video.setAttribute('mute', '');
         var source = document.createElement('source');
-        source.setAttribute('src', 'chicken-on-a-raft-new.mp4');
+        source.setAttribute('src', 'chicken-on-a-raft.mp4');
         source.setAttribute('type', 'video/mp4');
         video.appendChild(source);
         container.appendChild(video);
+        
+        var audio = document.getElementById('audio');
+        audio.play();
+        
+        video.onclick = function () {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;
+            }
+            // audio.stop();
+            audio.src = songs[currentSongIndex];
+            audio.play();
+        };
 
-        document.getElementById('counter').style.display = 'block';
+
+        document.getElementById('counter-container').style.display = 'block';
 
         interval = setInterval(function() {
             count++;
