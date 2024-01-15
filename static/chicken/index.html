@@ -2,42 +2,7 @@
 <html>
 <head>
     <title>Chicken on a Raft</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        #counter-container {
-            display: none;
-            text-align: center;
-            font-size: 2em;
-            font-family: Arial, sans-serif;
-            color: white;
-            background-color: black;
-            margin: 0;
-            border: 10px solid black;
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 10px;
-        }
-        p {
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -54,55 +19,7 @@
 </audio>
 
 
-<script>
-    let counter = document.getElementById('seconds');
-    let count = 0;
-    let interval;
-    let songs = [
-        'songs/chicken-sailors-ode.mp3',
-        'songs/chicken-symphony.mp3',
-        'songs/chicken-on-a-raft.mp3',
-        'songs/chicken-hallelujah.mp3',
-    ]
-    let currentSongIndex = 0;
-
-
-    function startVideo() {
-        let container = document.getElementById('container');
-        let image = document.getElementById('startImage');
-        container.removeChild(image);
-
-        let video = document.createElement('video');
-        video.setAttribute('autoplay', '');
-        video.setAttribute('loop', '');
-        video.setAttribute('mute', '');
-        let source = document.createElement('source');
-        source.setAttribute('src', 'chicken-on-a-raft.mp4');
-        source.setAttribute('type', 'video/mp4');
-        video.appendChild(source);
-        container.appendChild(video);
-        
-        let audio = document.getElementById('audio');
-        audio.play();
-        
-        video.onclick = function () {
-            currentSongIndex++;
-            if (currentSongIndex >= songs.length) {
-                currentSongIndex = 0;
-            }
-            audio.src = songs[currentSongIndex];
-            audio.play();
-        };
-
-
-        document.getElementById('counter-container').style.display = 'block';
-
-        interval = setInterval(function() {
-            count++;
-            counter.innerText = count;
-        }, 1000);
-    }
-</script>
+<script src="main.js" defer></script>
 
 </body>
 </html>
