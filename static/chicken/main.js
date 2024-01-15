@@ -2,9 +2,19 @@ let counter = document.getElementById('seconds');
 let count = 0;
 let interval;
 let songs = [
-    'songs/chicken-sailors-ode.mp3',
-    'songs/chicken-symphony.mp3',
-    'songs/chicken-on-a-raft.mp3',
+    'songs/club—chicken-on-a-raft.mp3',
+    'songs/Metal-Madness.mp3',
+    'songs/sad-piano—Shadows-on-the-Keys.mp3',
+    'songs/Chicken-on-a-Raft-(Opera-Edition).mp3',
+    'songs/folk—Hey-Oh,-Chicken-on-a-Raft.mp3',
+    'songs/club—Dance-All-Night.mp3',
+    'songs/jazz-Chicken-on-a-Raft.mp3',
+    'songs/country-Chicken-on-a-Raft-(2)-heavy-metal-hard-hitting-intense.mp3',
+    'songs/melodrama—chicken-sailors-ode.mp3',
+    'songs/pop-Chicken-on-a-Raft.mp3',
+    'songs/sad-piano—Reflections.mp3',
+    'songs/poppy-chicken-symphony.mp3',
+    'songs/Skippers-Lament.mp3',
     'songs/chicken-hallelujah.mp3',
 ]
 let currentSongIndex = 0;
