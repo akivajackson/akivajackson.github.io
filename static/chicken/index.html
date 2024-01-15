@@ -55,29 +55,34 @@
 
 
 <script>
-    var counter = document.getElementById('seconds');
-    var count = 0;
-    var interval;
-    var songs = ['chicken-sailors-ode.mp3', 'chicken-symphony.mp3', 'chicken-on-a-raft.mp3', 'chicken-hallelujah.mp3', ]
-    var currentSongIndex = 0;
+    let counter = document.getElementById('seconds');
+    let count = 0;
+    let interval;
+    let songs = [
+        'songs/chicken-sailors-ode.mp3',
+        'songs/chicken-symphony.mp3',
+        'songs/chicken-on-a-raft.mp3',
+        'songs/chicken-hallelujah.mp3',
+    ]
+    let currentSongIndex = 0;
 
 
     function startVideo() {
-        var container = document.getElementById('container');
-        var image = document.getElementById('startImage');
+        let container = document.getElementById('container');
+        let image = document.getElementById('startImage');
         container.removeChild(image);
 
-        var video = document.createElement('video');
+        let video = document.createElement('video');
         video.setAttribute('autoplay', '');
         video.setAttribute('loop', '');
         video.setAttribute('mute', '');
-        var source = document.createElement('source');
+        let source = document.createElement('source');
         source.setAttribute('src', 'chicken-on-a-raft.mp4');
         source.setAttribute('type', 'video/mp4');
         video.appendChild(source);
         container.appendChild(video);
         
-        var audio = document.getElementById('audio');
+        let audio = document.getElementById('audio');
         audio.play();
         
         video.onclick = function () {
@@ -85,7 +90,6 @@
             if (currentSongIndex >= songs.length) {
                 currentSongIndex = 0;
             }
-            // audio.stop();
             audio.src = songs[currentSongIndex];
             audio.play();
         };
