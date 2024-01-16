@@ -1,7 +1,7 @@
 ---
 title: "Wisdom Teeth: Chuck 'Em?"
 date: 2022-10-26 # T15:40:24+06:00
-image : "images/2020-three-quarters-1.png"
+image : "images/dalle-wisdom.png"
 # author
 author : ["Akiva"]
 # categories

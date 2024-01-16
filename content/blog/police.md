@@ -10,7 +10,7 @@ tage: ["tags"]
 # meta description
 description: "Coming Soon"
 # save as draft
-draft: false
+draft: true
 ---
 
 Coming soon!

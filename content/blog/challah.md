@@ -1,7 +1,7 @@
 ---
 title: "My Mother's Challah Recipe"
 date: 2022-10-25
-image : "/images/challah.jpg"
+image : "/images/dalle-challah.png"
 # author
 author : ["Akiva"]
 # categories

@@ -1,7 +1,7 @@
 ---
 title: "My Bachelor Thesis: Contradiction & Dichotomy"
 date: 2022-09-10
-image : "images/2020-three-quarters-4.png"
+image : "images/manger.jpg"
 # author
 author : ["Akiva"]
 # categories

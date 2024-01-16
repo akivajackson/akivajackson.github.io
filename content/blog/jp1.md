@@ -1,7 +1,7 @@
 ---
 title: "Blossoms from the Dust: A model for salvation"
 date: 2022-07-23
-image : "images/2020-three-quarters-4.png"
+image : "images/dalle-plain.png"
 # author
 author : ["Akiva"]
 # categories
