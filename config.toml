@@ -39,11 +39,6 @@ URL = "/"
 weight = 1
 
 [[menu.main]]
-name = "Tutoring"
-URL = "tutoring/"
-weight = 5
-
-[[menu.main]]
 name = "About"
 URL = "about/"
 weight = 2
@@ -63,22 +58,21 @@ name = "CV"
 URL = "curriculum-vitae/"
 weight = 5
 
-# [[menu.main]]
-# name = "CV"
-# URL = "cv/"
-# weight = 6
+[[menu.main]]
+name = "Tutoring"
+URL = "tutoring/"
+weight = 6
+
+[[menu.main]]
+name = "Chicken on a Raft"
+URL = "chicken/"
+weight = 7
 
 # only desktop menu
 [[menu.desktop]]
 name = "Contact"
 URL = "contact/"
 weight = 1
-
-[[menu.desktop]]
-name = "Tutoring"
-URL = "tutoring/"
-weight = 1
-
 
 #################### default parameters ################################
 [params]
