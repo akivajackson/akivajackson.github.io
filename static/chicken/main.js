@@ -78,12 +78,15 @@ let currentGifIndex = 0;
 let audio = document.getElementById('audio');
 let image = document.getElementById('startImage');
 
-nextSong = function () {
-    currentSongIndex = (currentSongIndex + 1) % songs.length;
+clickNextSong = function () {
+    nextSong(1);
+}
+nextSong = function (increment = 1) {
+    currentSongIndex = (currentSongIndex + increment) % songs.length;
     audio.src = songs[currentSongIndex];
     audio.play();
 
-    currentGifIndex = (currentGifIndex + 1) % gifs.length;
+    currentGifIndex = (currentGifIndex + increment) % gifs.length;
     image.src = gifs[currentGifIndex];
     for (let li of lis) {
         li.classList.remove('current');
@@ -104,9 +107,9 @@ for (let i = 0; i < gifs.length; i++) {
     let img = document.createElement('img');
     img.src = gifs[i];
     img.onclick = function () {
-        currentGifIndex = i - 1;
-        currentSongIndex = i - 1;
-        nextSong();
+        currentGifIndex = i;
+        currentSongIndex = i;
+        nextSong(0);
     };
     li.appendChild(img);
     ul.appendChild(li);
@@ -124,7 +127,7 @@ function startVideo() {
     audio.play();
     lis[currentGifIndex + 1].classList.add('current');
 
-    image.onclick = nextSong;
+    image.onclick = clickNextSong;
 
     document.getElementById('counter-container').style.display = 'block';
 
@@ -149,4 +152,12 @@ songs.forEach(song => {
 gifs.forEach(gif => {
     let img = new Image();
     img.src = gif;
+});
+
+window.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowRight') {
+        nextSong(1);
+    } else if (event.key === 'ArrowLeft') {
+        nextSong(-1);
+    }
 });
