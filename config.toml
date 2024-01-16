@@ -55,8 +55,13 @@ weight = 4
 
 [[menu.main]]
 name = "CV"
-URL = "curriculum-vitae/"
+URL = "sample-page/"
 weight = 5
+
+#[[menu.main]]
+#name = "CV"
+#URL = "curriculum-vitae/"
+#weight = 5
 
 [[menu.main]]
 name = "Tutoring"
