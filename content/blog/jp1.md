@@ -1,7 +1,7 @@
 ---
 title: "Blossoms from the Dust: A model for salvation"
 date: 2022-07-23
-image : "images/dalle-plain.png"
+image : "images/rilke/dalle-plain.png"
 # author
 author : ["Akiva"]
 # categories
@@ -51,3 +51,13 @@ wenn du am Fenster stehst.</td>
 
 
 {{< embed-pdf url="./pdfs/Jackson_JP1.pdf" >}}
+
+_**Update January 16, 2024:**_ 
+I have recently been playing around with AI image generation a lot, and created a series of images to illustrate this poem.
+
+![dalle: plain](/images/rilke/DALL·E-2023-12-07-21.07.24---Create-an-Art-Nouveau-painting-illustrating-the-poem,-capturing-its-themes-and-imagery.-The-painting-should-depict-a-storm's-force,-with-trees-fleeing.png)
+![dalle: plain](/images/rilke/DALL·E-2023-12-08-00.05.27---Create-an-Art-Nouveau-image-for-the-second-stanza-of-the-poem,-reflecting-the-stillness-of-summer-and-the-rising-life-force-in-the-trees.-Illustrate-t.png)
+![dalle: plain](/images/rilke/DALL·E-2023-12-07-21.15.47---Create-an-Art-Nouveau-image-depicting-the-heart-as-a-blossoming-garden-in-the-middle-of-an-open-plain,-as-described-in-the-stanza.-The-garden,-rich-wi.png)
+![dalle: plain](/images/rilke/DALL·E-2023-12-07-21.22.48---Create-an-Art-Nouveau-image-representing-the-transition-from-the-interior-of-a-house-to-the-vastness-of-an-open-plain,-as-described-in-the-stanza.-The.png)
+![dalle: plain](/images/rilke/DALL·E-2023-12-08-00.05.10---Create-an-Art-Nouveau-image-depicting-the-heart-as-a-blossoming-garden-in-the-middle-of-an-open-plain,-as-described-in-the-stanza.-The-garden,-rich-wi.png)
+![dalle: plain](/images/rilke/DALL·E-2023-12-08-00.05.35---Create-an-Art-Nouveau-image-for-the-first-stanza-of-the-poem,-capturing-the-scene-of-a-storm-growing-in-power,-with-trees-fleeing-and-creating-'walkin.png)
