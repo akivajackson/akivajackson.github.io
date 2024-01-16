@@ -119,3 +119,17 @@ function startVideo() {
     // Make the carousel visible
     carousel.style.display = 'block';
 }
+
+let first_img = new Image();
+first_img.src = gifs[0];
+// Preload songs
+songs.forEach(song => {
+    let audio = new Audio();
+    audio.src = song;
+});
+
+// Preload images
+gifs.forEach(gif => {
+    let img = new Image();
+    img.src = gif;
+});
