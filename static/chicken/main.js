@@ -17,7 +17,14 @@ let songs = [
     'songs/chicken-hallelujah.mp3',
     'songs/poppy-chicken-symphony.mp3',
 ]
+let gifs = [
+    'gifs/sunset.gif',
+    'gifs/dj.gif',
+    'gifs/indie.gif',
+    'gifs/metal.gif',
+]
 let currentSongIndex = 0;
+let currentGifIndex = 0;
 
 
 function startVideo() {
@@ -25,26 +32,26 @@ function startVideo() {
     let image = document.getElementById('startImage');
     container.removeChild(image);
 
-    let video = document.createElement('video');
-    video.setAttribute('autoplay', '');
-    video.setAttribute('loop', '');
-    video.setAttribute('mute', '');
-    let source = document.createElement('source');
-    source.setAttribute('src', 'chicken-on-a-raft.mp4');
-    source.setAttribute('type', 'video/mp4');
-    video.appendChild(source);
-    container.appendChild(video);
+    let gif = document.createElement('img');
+    gif.setAttribute('src', gifs[currentGifIndex]);
+    container.appendChild(gif);
 
     let audio = document.getElementById('audio');
     audio.play();
 
-    video.onclick = function () {
+    gif.onclick = function () {
         currentSongIndex++;
         if (currentSongIndex >= songs.length) {
             currentSongIndex = 0;
         }
         audio.src = songs[currentSongIndex];
         audio.play();
+        
+        currentGifIndex++;
+        if (currentGifIndex >= gifs.length) {
+            currentGifIndex = 0;
+        }
+        gif.src = gifs[currentGifIndex];
     };
 
 
