@@ -7,12 +7,13 @@
 <body>
 
 <div class="img-container" id="container">
-    <img id="startImage" src="chicken-click.jpg" onclick="startVideo()" style="width:100%; ">
+    <img id="startImage" src="chicken-click.jpg" class="clickable" onclick="startVideo()">
 </div>
 
 <div id="counter-container"><p id="counter">You have been on a raft with a chicken for <span id="seconds">0</span> seconds.</p>
     <p id="click-to-change">Click the video to change the song</p></div>
 
+<p id="click-back" class="clickable" onclick="backOne()">(go back one song)</p>
 
 <audio src='songs/club—chicken-on-a-raft.mp3' id="audio" loop>
 <p>If you are reading this, it is because your browser does not support the audio element.</p>

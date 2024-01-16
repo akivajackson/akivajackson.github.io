@@ -21,13 +21,13 @@ let gifs = [
     'gifs/sunset.gif',
     'gifs/dj.gif',
     'gifs/indie.gif',
+    'gifs/DALL·E-2024-01-15-18.53.06---A-chicken-on-a-raft-in-a-warm-and-rustic-folk-style.-The-chicken-is-peaceful-and-serene,-depicted-with-natural-and-earthy-tones.-The-raft-is-made-of-n.png',
     'gifs/metal.gif',
+    'gifs/DALL·E-2024-01-15-18.48.02---A-jazz-album-cover-featuring-a-chicken-on-a-raft.-The-style-is-cool-and-sophisticated,-with-a-hint-of-vintage-charm.-The-chicken-is-stylized-in-a-slee.png',
+    'gifs/DALL·E-2024-01-15-18.53.16---A-chicken-on-a-raft-in-a-grand-and-dramatic-opera-style.-The-chicken-is-depicted-in-a-theatrical-and-powerful-manner,-possibly-wearing-a-miniature-ope.png',
     'gifs/DALL·E-2024-01-15-18.42.49---An-album-cover-for-a-death-metal-song-featuring-a-chicken-on-a-raft.-The-style-is-dark-and-intense,-with-the-chicken-portrayed-in-a-fierce,-almost-men.png',
     'gifs/DALL·E-2024-01-15-18.47.57---An-opera-album-cover-with-a-chicken-on-a-raft.-The-style-is-grand-and-dramatic,-reflecting-the-theatrical-nature-of-opera.-The-chicken-is-depicted-in-.png',
-    'gifs/DALL·E-2024-01-15-18.48.02---A-jazz-album-cover-featuring-a-chicken-on-a-raft.-The-style-is-cool-and-sophisticated,-with-a-hint-of-vintage-charm.-The-chicken-is-stylized-in-a-slee.png',
     'gifs/DALL·E-2024-01-15-18.48.08---A-folk-album-cover-featuring-a-chicken-on-a-raft.-The-style-is-warm-and-rustic,-with-the-chicken-depicted-in-a-peaceful,-serene-manner.-The-raft-is-ma.png',
-    'gifs/DALL·E-2024-01-15-18.53.06---A-chicken-on-a-raft-in-a-warm-and-rustic-folk-style.-The-chicken-is-peaceful-and-serene,-depicted-with-natural-and-earthy-tones.-The-raft-is-made-of-n.png',
-    'gifs/DALL·E-2024-01-15-18.53.16---A-chicken-on-a-raft-in-a-grand-and-dramatic-opera-style.-The-chicken-is-depicted-in-a-theatrical-and-powerful-manner,-possibly-wearing-a-miniature-ope.png',
     'gifs/DALL·E-2024-01-15-18.53.21---A-chicken-on-a-raft-in-a-cool-and-sophisticated-jazz-style.-The-chicken-is-stylized-in-a-sleek,-jazzy-manner,-possibly-with-elements-like-a-hat-or-a-s.png',
     'gifs/DALL·E-2024-01-15-21.46.46---A-chicken-on-a-raft-in-a-fantasy-art-style,-reminiscent-of-a-scene-from-a-fairy-tale.-The-chicken-appears-mystical-and-enchanting,-possibly-with-magic.png',
     'gifs/DALL·E-2024-01-15-21.46.48---A-chicken-on-a-raft-in-a-traditional-Japanese-ukiyo-e-woodblock-print-style.-The-image-features-classic-ukiyo-e-elements,-such-as-curving-lines-and-fl.png',
@@ -58,20 +58,15 @@ let gifs = [
 let currentSongIndex = 0;
 let currentGifIndex = 0;
 
+let audio = document.getElementById('audio');
+let image = document.getElementById('startImage');
 
 function startVideo() {
-    let container = document.getElementById('container');
-    let image = document.getElementById('startImage');
-    container.removeChild(image);
-
-    let gif = document.createElement('img');
-    gif.setAttribute('src', gifs[currentGifIndex]);
-    container.appendChild(gif);
-
-    let audio = document.getElementById('audio');
+    image.setAttribute('src', gifs[currentGifIndex]);
+    image.setAttribute('id', 'gif');
     audio.play();
 
-    gif.onclick = function () {
+    image.onclick = function () {
         currentSongIndex++;
         if (currentSongIndex >= songs.length) {
             currentSongIndex = 0;
@@ -88,9 +83,26 @@ function startVideo() {
 
 
     document.getElementById('counter-container').style.display = 'block';
+    let clickBack = document.getElementById('click-back')
+    clickBack.style.display = 'block';
 
     interval = setInterval(function () {
         count++;
         counter.innerText = count;
     }, 1000);
+}
+
+function backOne() {
+    currentSongIndex--;
+    if (currentSongIndex < 0) {
+        currentSongIndex = songs.length - 1;
+    }
+    audio.src = songs[currentSongIndex];
+    audio.play();
+
+    currentGifIndex--;
+    if (currentGifIndex < 0) {
+        currentGifIndex = gifs.length - 1;
+    }
+    image.src = gifs[currentGifIndex];
 }
