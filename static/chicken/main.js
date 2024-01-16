@@ -68,17 +68,20 @@ nextSong = function () {
 
     currentGifIndex = (currentGifIndex + 1) % gifs.length;
     image.src = gifs[currentGifIndex];
-    let lis = document.querySelectorAll('#carousel li');
     for (let li of lis) {
         li.classList.remove('current');
     }
-    lis[currentGifIndex].classList.add('current');
-    lis[currentGifIndex].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+    lis[currentGifIndex + 1].classList.add('current');
+    lis[currentGifIndex + 1].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
 };
 
 // Add the carousel of images
 let carousel = document.getElementById('carousel');
 let ul = document.getElementById('carouselList');
+// Add an empty li at the start
+let startLi = document.createElement('li');
+startLi.classList.add('padding');
+ul.appendChild(startLi);
 for (let i = 0; i < gifs.length; i++) {
     let li = document.createElement('li');
     let img = document.createElement('img');
@@ -91,12 +94,18 @@ for (let i = 0; i < gifs.length; i++) {
     li.appendChild(img);
     ul.appendChild(li);
 }
+// Add an empty li at the end
+let endLi = document.createElement('li');
+endLi.classList.add('padding');
+let lis = document.querySelectorAll('#carousel li');
+ul.appendChild(endLi);
 carousel.appendChild(ul);
 
 function startVideo() {
     image.setAttribute('src', gifs[currentGifIndex]);
     image.setAttribute('id', 'gif');
     audio.play();
+    lis[currentGifIndex + 1].classList.add('current');
 
     image.onclick = nextSong;
 

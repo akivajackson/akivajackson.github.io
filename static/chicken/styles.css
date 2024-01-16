@@ -91,11 +91,24 @@ p {
 #carousel ul {
     list-style-type: none;
     margin: 0;
-    padding: 0 50%;  /* Add horizontal padding */
+    padding: 0;
 }
 
 #carousel li {
     display: inline-block;
+}
+
+#carousel li.padding {
+    width: calc(50vw - 40px);
+    height: 80px
+}
+
+#carousel li.current {
+    scroll-behavior: smooth;
+    
+    & img {
+        border: 2px solid white;
+    }
 }
 
 #carousel img {
@@ -116,8 +129,4 @@ p {
     height: 100px;
     background: linear-gradient(to right, black, transparent 40%, transparent 60%, black);
     pointer-events: none;
-}
-
-#carousel li.current {
-    scroll-behavior: smooth;
 }
