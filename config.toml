@@ -96,7 +96,6 @@ expire_days = 2
 
 # banner
 [params.banner]
-heading = "### [(Looking for my Tutoring Site?)](/tutoring) \n # Akiva Jackson's Portfolio"
 # image = "images/2020-landscape-1-2.png"
 image = "images/headshot.png"
 
