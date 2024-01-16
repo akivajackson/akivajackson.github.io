@@ -66,43 +66,45 @@ function startVideo() {
     image.setAttribute('id', 'gif');
     audio.play();
 
-    image.onclick = function () {
-        currentSongIndex++;
-        if (currentSongIndex >= songs.length) {
-            currentSongIndex = 0;
-        }
+    nextSong = function () {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
         audio.src = songs[currentSongIndex];
         audio.play();
 
-        currentGifIndex++;
-        if (currentGifIndex >= gifs.length) {
-            currentGifIndex = 0;
+        currentGifIndex = (currentGifIndex + 1) % gifs.length;
+        image.src = gifs[currentGifIndex];
+        let lis = document.querySelectorAll('#carousel li');
+        for (let li of lis) {
+            li.classList.remove('current');
         }
-        gif.src = gifs[currentGifIndex];
-    };
+        lis[currentGifIndex].classList.add('current');
+        lis[currentGifIndex].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
 
+    };
+    image.onclick = nextSong;
 
     document.getElementById('counter-container').style.display = 'block';
-    let clickBack = document.getElementById('click-back')
-    clickBack.style.display = 'block';
 
     interval = setInterval(function () {
         count++;
         counter.innerText = count;
     }, 1000);
-}
 
-function backOne() {
-    currentSongIndex--;
-    if (currentSongIndex < 0) {
-        currentSongIndex = songs.length - 1;
+    let carousel = document.createElement('div');
+    carousel.id = 'carousel';
+    let ul = document.createElement('ul');
+    for (let i = 0; i < gifs.length; i++) {
+        let li = document.createElement('li');
+        let img = document.createElement('img');
+        img.src = gifs[i];
+        img.onclick = function () {
+            currentGifIndex = i - 1;
+            currentSongIndex = i - 1;
+            nextSong();
+        };
+        li.appendChild(img);
+        ul.appendChild(li);
     }
-    audio.src = songs[currentSongIndex];
-    audio.play();
-
-    currentGifIndex--;
-    if (currentGifIndex < 0) {
-        currentGifIndex = gifs.length - 1;
-    }
-    image.src = gifs[currentGifIndex];
+    carousel.appendChild(ul);
+    document.body.appendChild(carousel);
 }
