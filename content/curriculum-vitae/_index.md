@@ -15,13 +15,18 @@ akivajackson@gmail.com
 Researcher with experience developing data analytics tools for organizations from neuroscience and psychology labs to nonprofits and schools. Experiential and former classroom educator for students between six and sixty, campers to PhD candidates. Leadership trainer committed to developing strong teams with an ethic of care and collaboration. 
 
 ### Professional Experience  
-**Coding Bootcamp & Statistics Self-Study**, Boston, MA                                &ensp; _June 2022-Present_  
+**Software Engineer**, Zagaran Software, Boston, MA                                &ensp; _January 2023-Present_
+•   Contributing to a state public housing project
+•   Developed software for chemistry lab automation
+•   Worked on a nonprofit website, adding features for national collaboration.
+•   Built a corporate website
+
+**Coding Bootcamp & Software Freelance**, Boston, MA                                &ensp; _June 2022-December 2022_  
 •   Data Analysis with Python (freeCodeCamp): studied libraries including Numpy, Pandas, Matplotlib, Seaborn  
 •   Analyzing political polling, police violence and US public transport data using Python and Vega Altair  
 •   Website design: designed dynamic personal tutoring website and provide support for a therapist’s site  
 •   Statistics: Self-studying Econometrics: Methods and Applications (Erasmus University Rotterdam/Coursera), Mastering ‘Metrics from MIT’s Josh Angrist  
-  
-  
+
 **Teacher & Community Organizer**, Hillel Deutschland, Berlin, Germany                      &ensp; _October 2021-July 2022_  
 Recipient of Princeton University Tiger Futures Service Fellowship   
 •   Planned and ran over 120 events to foster European Jewish community, including teaching weekly bilingual Jewish education courses to undergraduate and graduate students in Berlin, Barcelona, & Amsterdam  
@@ -63,26 +68,3 @@ Senior Thesis: _Contradiction & Dichotomy: David Bergelson and Itzik Manger Conf
 **Technical skills:** Python, SQL, R, Google Apps Script, Java, JS | Advanced Excel/VBA and Google Sheets | Salesforce | Wilderness First Responder Certification/CPR   
 **Coursework:** Math-major track coursework (Number Theory, Linear Algebra), advanced physics, philosophy, sociology, anthropology, politics and language  
   
-
-
-<!-- 
-<p>This is an example page. It&#8217;s different from a blog post because it will stay in one place and will show
-up in your site navigation (in most themes). Most people start with an About page that introduces them to
-potential site visitors. It might say something like this:</p>
-
-<blockquote class="wp-block-quote">
-<p>Hi there! I&#8217;m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los
-Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin&#8217; caught in the rain.)
-</p>
-</blockquote>
-
-<p>&#8230;or something like this:</p>
-
-<blockquote class="wp-block-quote">
-<p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever
-since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the
-Gotham community.</p>
-</blockquote>
-
-<p>As a new WordPress user, you should go to your dashboard to delete this
-page and create new pages for your content. Have fun!</p> -->
