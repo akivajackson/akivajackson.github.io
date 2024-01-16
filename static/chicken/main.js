@@ -61,26 +61,43 @@ let currentGifIndex = 0;
 let audio = document.getElementById('audio');
 let image = document.getElementById('startImage');
 
+nextSong = function () {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    audio.src = songs[currentSongIndex];
+    audio.play();
+
+    currentGifIndex = (currentGifIndex + 1) % gifs.length;
+    image.src = gifs[currentGifIndex];
+    let lis = document.querySelectorAll('#carousel li');
+    for (let li of lis) {
+        li.classList.remove('current');
+    }
+    lis[currentGifIndex].classList.add('current');
+    lis[currentGifIndex].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+};
+
+// Add the carousel of images
+let carousel = document.getElementById('carousel');
+let ul = document.getElementById('carouselList');
+for (let i = 0; i < gifs.length; i++) {
+    let li = document.createElement('li');
+    let img = document.createElement('img');
+    img.src = gifs[i];
+    img.onclick = function () {
+        currentGifIndex = i - 1;
+        currentSongIndex = i - 1;
+        nextSong();
+    };
+    li.appendChild(img);
+    ul.appendChild(li);
+}
+carousel.appendChild(ul);
+
 function startVideo() {
     image.setAttribute('src', gifs[currentGifIndex]);
     image.setAttribute('id', 'gif');
     audio.play();
 
-    nextSong = function () {
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
-        audio.src = songs[currentSongIndex];
-        audio.play();
-
-        currentGifIndex = (currentGifIndex + 1) % gifs.length;
-        image.src = gifs[currentGifIndex];
-        let lis = document.querySelectorAll('#carousel li');
-        for (let li of lis) {
-            li.classList.remove('current');
-        }
-        lis[currentGifIndex].classList.add('current');
-        lis[currentGifIndex].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
-
-    };
     image.onclick = nextSong;
 
     document.getElementById('counter-container').style.display = 'block';
@@ -90,21 +107,6 @@ function startVideo() {
         counter.innerText = count;
     }, 1000);
 
-    let carousel = document.createElement('div');
-    carousel.id = 'carousel';
-    let ul = document.createElement('ul');
-    for (let i = 0; i < gifs.length; i++) {
-        let li = document.createElement('li');
-        let img = document.createElement('img');
-        img.src = gifs[i];
-        img.onclick = function () {
-            currentGifIndex = i - 1;
-            currentSongIndex = i - 1;
-            nextSong();
-        };
-        li.appendChild(img);
-        ul.appendChild(li);
-    }
-    carousel.appendChild(ul);
-    document.body.appendChild(carousel);
+    // Make the carousel visible
+    carousel.style.display = 'block';
 }
