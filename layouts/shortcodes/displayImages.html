@@ -1,0 +1,9 @@
+{{ $path := .Get "path" }}
+{{ range (readDir $path) }}
+    {{ if or (strings.HasSuffix .Name ".jpg") (strings.HasSuffix .Name ".png") (strings.HasSuffix .Name ".jpeg") (strings.HasSuffix .Name ".gif") }}
+        {{ $image := printf "/%s/%s" $path .Name }}
+        {{ $markdown := printf "![%s](%s)" .Name $image | markdownify }}
+        {{ $markdown = $markdown | replaceRE "static/" "" }}
+        {{ $markdown | safeHTML }}
+    {{ end }}
+{{ end }}
