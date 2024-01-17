@@ -94,6 +94,11 @@ nextSong = function (increment = 1) {
     }
     lis[currentGifIndex + 1].classList.add('current');
     lis[currentGifIndex + 1].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+    
+    //preload the next song
+    let nextSongIndex = (currentSongIndex + 1) % songs.length;
+    let nextSong = new Audio();
+    nextSong.src = songs[nextSongIndex];
 };
 
 // Add the carousel of images
@@ -143,19 +148,9 @@ function startVideo() {
     document.getElementById('downloadButton').style.display = 'block';
 }
 
+// Preload the first image(the first song is already preloaded in the HTML)
 let first_img = new Image();
 first_img.src = gifs[0];
-// Preload songs
-songs.forEach(song => {
-    let audio = new Audio();
-    audio.src = song;
-});
-
-// Preload images
-gifs.forEach(gif => {
-    let img = new Image();
-    img.src = gif;
-});
 
 window.addEventListener('keydown', function(event) {
     if (event.key === 'ArrowRight') {
@@ -175,5 +170,13 @@ document.getElementById('muteButton').addEventListener('click', function() {
         // If the audio is currently playing, mute it and change the image source
         audioElem.muted = true;
         this.src = 'icons/mute.png';
+    }
+});
+
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden){
+        audio.pause();
+    } else {
+        audio.play();
     }
 });
