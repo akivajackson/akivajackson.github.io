@@ -177,3 +177,11 @@ document.getElementById('muteButton').addEventListener('click', function() {
         this.src = 'icons/mute.png';
     }
 });
+
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden){
+        audio.pause();
+    } else {
+        audio.play();
+    }
+});
