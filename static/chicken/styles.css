@@ -42,13 +42,23 @@ img {
     border-radius: 10px;
 }
 
-#muteButton {
+#muteButton, #downloadButton {
     position: absolute;
     top: 50px;
     right: 50px;
     height: 60px;
     width: auto;
     display: none;
+}
+
+#downloadButton {
+    left: 50px;
+    
+    & img {
+        position: relative;
+        height: 100%;
+        width: auto;
+    }
 }
 
 p {
