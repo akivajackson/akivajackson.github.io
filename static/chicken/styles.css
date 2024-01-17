@@ -42,6 +42,15 @@ img {
     border-radius: 10px;
 }
 
+#muteButton {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    height: 60px;
+    width: auto;
+    display: none;
+}
+
 p {
     margin: 0;
 }

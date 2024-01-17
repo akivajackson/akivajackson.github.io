@@ -138,6 +138,7 @@ function startVideo() {
 
     // Make the carousel visible
     carousel.style.display = 'block';
+    document.getElementById('muteButton').style.display = 'block';
 }
 
 let first_img = new Image();
@@ -159,5 +160,18 @@ window.addEventListener('keydown', function(event) {
         nextSong(1);
     } else if (event.key === 'ArrowLeft') {
         nextSong(-1);
+    }
+});
+
+document.getElementById('muteButton').addEventListener('click', function() {
+    let audioElem = document.getElementById('audio');
+    if (audioElem.muted) {
+        // If the audio is currently muted, unmute it and change the image source
+        audioElem.muted = false;
+        this.src = 'icons/unmute.png';
+    } else {
+        // If the audio is currently playing, mute it and change the image source
+        audioElem.muted = true;
+        this.src = 'icons/mute.png';
     }
 });
