@@ -45,12 +45,13 @@ img {
 #muteButton, #downloadButton {
     position: absolute;
     top: 50px;
-    right: 50px;
     height: 60px;
     width: auto;
     display: none;
 }
-
+#muteButton {
+    right: 50px;
+}
 #downloadButton {
     left: 50px;
     
