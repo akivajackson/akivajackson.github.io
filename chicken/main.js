@@ -77,13 +77,14 @@ let currentGifIndex = 0;
 
 let audio = document.getElementById('audio');
 let image = document.getElementById('startImage');
+let downloadButton = document.getElementById('downloadButton');
 
 clickNextSong = function () {
     nextSong(1);
 }
 nextSong = function (increment = 1) {
     currentSongIndex = (currentSongIndex + increment) % songs.length;
-    audio.src = songs[currentSongIndex];
+    downloadButton.href = audio.src = songs[currentSongIndex];
     audio.play();
 
     currentGifIndex = (currentGifIndex + increment) % gifs.length;
@@ -139,6 +140,7 @@ function startVideo() {
     // Make the carousel visible
     carousel.style.display = 'block';
     document.getElementById('muteButton').style.display = 'block';
+    document.getElementById('downloadButton').style.display = 'block';
 }
 
 let first_img = new Image();
