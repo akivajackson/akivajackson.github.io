@@ -79,13 +79,15 @@ p {
     img {
         width: 100%;
     }
-
-    #counter {
-        font-size: 25px;
+}
+@media (max-width: 450px) {
+    #counter-container {
+        top: 100px;
     }
-
-    #click-to-change {
-        font-size: 20px;
+}
+@media (max-width: 400px) {
+    #counter-container {
+        top: 130px;
     }
 }
 
@@ -96,7 +98,7 @@ p {
 
 #carousel {
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
@@ -149,4 +151,19 @@ p {
     height: 100px;
     background: linear-gradient(to right, black, transparent 40%, transparent 60%, black);
     pointer-events: none;
+}
+
+
+footer {
+    position: absolute;
+    font-family: serif;
+    bottom: 5px;
+    background-color: black;
+    color: #f85e61;
+    text-align: center;
+    font-size: 10px;
+    
+    & a {
+        color: #be2c2e;
+    }
 }
