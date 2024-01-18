@@ -9,12 +9,14 @@
 <body>
 
 <div class="img-container" id="container">
-    <img id="startImage" src="chicken-click.jpg" class="clickable" onclick="startVideo()">
+    <img id="startImage" src="chicken-click.jpg" class="clickable" onclick="startVideo()" alt="Chicken on a raft">
 </div>
 
 <div id="counter-container">
     <p id="counter">You have been on a raft with a chicken for <span id="seconds">0</span> seconds.</p>
-    <p id="click-to-change">Click the video to change the song</p>
+    <p id="click-to-change">Click the video to change the song. Genre: <label for="songDropdown"></label><select id="songDropdown">
+    <option value="">Select a genre</option>
+</select></p>
 </div>
 
 <img id="muteButton" src="icons/unmute.png" alt="mute/unmute button">
