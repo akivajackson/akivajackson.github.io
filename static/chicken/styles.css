@@ -12,19 +12,6 @@ body {
     margin: 0;
 }
 
-.img-container {
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-
-img {
-    width: 600px;
-}
-
-#startImage {
-    width: 100%;
-}
 
 #counter-container {
     display: none;
@@ -75,11 +62,6 @@ p {
     margin-top: 5px;
 }
 
-@media (max-width: 600px) {
-    img {
-        width: 100%;
-    }
-}
 @media (max-width: 450px) {
     #counter-container {
         top: 100px;
@@ -103,10 +85,27 @@ p {
 
 }
 
+.img-container {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.main-image {
+    width: 600px;
+}
+@media (max-width: 600px) {
+    .main-image {
+        width: 100%;
+    }
+}
+#startImage {
+    width: 100%;
+}
+/*.vid {*/
+/*    display: none;*/
+/*}*/
 .clickable {
     cursor: pointer;
 }
-
 
 #carousel {
     position: fixed;
@@ -145,13 +144,15 @@ p {
     }
 }
 
-#carousel img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 10px;
+#carousel {
+    & img, & video {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
 }
 
 #carousel::before {

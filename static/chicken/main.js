@@ -5,11 +5,11 @@ let songsAndImgs = [
     {
         "genre": "Electro Groove",
         "song": 'club—chicken-on-a-raft.mp3',
-        "img": 'dj.gif',
+        "img": 'dj.mp4',
     }, {
         "genre": "Melancholic Melody",
         "song": 'sad-piano—Reflections.mp3',
-        "img": 'indie.gif',
+        "img": 'indie.mp4',
     }, {
         "genre": "Funky Beats",
         "song": "funk-groovy--Funky-Chicken-(1).mp3",
@@ -21,11 +21,11 @@ let songsAndImgs = [
     }, {
         "genre": "Metal Mayhem",
         "song": 'Metal-Madness.mp3',
-        "img": 'metal.gif',
+        "img": 'metal.mp4',
     }, {
         "genre": "Sitar Rhythms",
         "song": "sitar-infused-traditional-indian-The-Chicken's-Raft.mp3",
-        "img": 'sunset.gif',
+        "img": 'sunset.mp4',
     }, {
         "genre": "Jazzy Vibes",
         "song": 'jazz-Chicken-on-a-Raft.mp3',
@@ -131,6 +131,8 @@ let songsAndImgs = [
 let currentIndex = 0;
 
 let audio = document.getElementById('audio');
+let video = document.getElementById('video');
+let videoSource = document.getElementById('video-source');
 let image = document.getElementById('startImage');
 let downloadButton = document.getElementById('downloadButton');
 
@@ -142,7 +144,21 @@ nextSong = function (increment = 1) {
     downloadButton.href = audio.src = songsAndImgs[currentIndex].song;
     audio.play();
 
-    image.src = songsAndImgs[currentIndex].img;
+    let src = songsAndImgs[currentIndex].img;
+    if (src.split('.').pop() === 'mp4') { // check file extension
+        console.log(`src: ${src}`)
+        videoSource.src = src;
+        video.load(); // load the new video source
+        video.play();
+        image.style.display = 'none';
+        video.style.display = 'block';
+    } else {
+        image.src = src;
+        video.pause();
+        image.style.display = 'block';
+        video.style.display = 'none';
+    }
+
     for (let li of lis) {
         li.classList.remove('current');
     }
@@ -168,8 +184,19 @@ startLi.classList.add('padding');
 ul.appendChild(startLi);
 for (let i = 0; i < songsAndImgs.length; i++) {
     let li = document.createElement('li');
-    let img = document.createElement('img');
-    img.src = songsAndImgs[i].img;
+    let src = songsAndImgs[i].img;
+    let img;
+    if (src.split('.').pop() === 'mp4') { // check file extension
+        img = document.createElement('video');
+        img.src = src;
+        img.autoplay = true;
+        img.loop = true;
+        img.muted = true;
+        img.setAttribute('playsinline', '');
+    }else {
+        img = document.createElement('img');
+        img.src = songsAndImgs[i].img;
+    }
     img.onclick = function () {
         currentIndex = i;
         nextSong(0);
@@ -245,8 +272,9 @@ function populateSongDropdown() {
         dropdown.add(option);
     });
 }
+
 populateSongDropdown();
-document.getElementById('songDropdown').addEventListener('change', function() {
+document.getElementById('songDropdown').addEventListener('change', function () {
     currentIndex = parseInt(this.value);
     nextSong(0);
 });
