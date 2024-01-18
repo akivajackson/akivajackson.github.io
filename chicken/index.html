@@ -9,7 +9,11 @@
 <body>
 
 <div class="img-container" id="container">
-    <img id="startImage" src="chicken-click.jpg" class="clickable" onclick="startVideo()" alt="Chicken on a raft">
+    <img id="startImage" src="chicken-click.jpg" class="clickable main-image" onclick="startVideo()" alt="Chicken on a raft">
+    <video id="video" class="clickable main-image" style="display: none;" onclick="clickNextSong()" loop muted>
+        <source id="video-source" src="gifs/dj.mp4" type="video/mp4">
+        <p>If you are reading this, it is because your browser does not support the video element.</p>
+    </video>
 </div>
 
 <div id="counter-container">
