@@ -29,9 +29,9 @@
         </div>
       </div>
       {{ end }}
-      <div class="wp-block-columns columns alignwide">
+      <div class="wp-block-columns columns alignwide" style="justify-content: center;">
         {{ range (where .Site.RegularPages "Section" "blog")}}
-        <div class="column">
+        <div class="column" style="max-width: 400px">
           <div class="wp-block-group">
             <div class="wp-block-group__inner-container">
               <figure class="wp-block-image alignfull size-full"><img src="{{ .Params.Image |absURL }}"
