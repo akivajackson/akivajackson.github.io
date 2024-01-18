@@ -192,7 +192,7 @@ function startVideo() {
 
     interval = setInterval(function () {
         count++;
-        counter.innerText = count;
+        counter.innerText = count.toString();
     }, 1000);
 
     // Make the carousel visible
