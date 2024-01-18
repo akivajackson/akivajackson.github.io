@@ -150,13 +150,14 @@ nextSong = function (increment = 1) {
     lis[currentIndex + 1].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
 
     // Update the dropdown to the genre of the current song
-    document.getElementById('songDropdown').value = songsAndGifs[currentIndex].genre;
+    document.getElementById('songDropdown').value = currentIndex;
 
     //preload the next song
     let nextSongIndex = (currentIndex + 1) % songsAndGifs.length;
     let nextSong = new Audio();
     nextSong.src = songsAndGifs[nextSongIndex].song;
 };
+
 
 // Add the carousel of images
 let carousel = document.getElementById('carousel');
@@ -182,6 +183,7 @@ endLi.classList.add('padding');
 let lis = document.querySelectorAll('#carousel li');
 ul.appendChild(endLi);
 carousel.appendChild(ul);
+
 
 function startVideo() {
     image.setAttribute('id', 'gif');
@@ -235,26 +237,16 @@ document.addEventListener("visibilitychange", function () {
 });
 
 function populateSongDropdown() {
-    let genres = [...songsAndGifs.map(song => song.genre)];
     let dropdown = document.getElementById('songDropdown');
-    genres.forEach(genre => {
+    songsAndGifs.forEach((song, index) => {
         let option = document.createElement('option');
-        option.value = genre;
-        option.text = genre;
+        option.value = index.toString(); // set the value to the index
+        option.text = song.genre;
         dropdown.add(option);
     });
 }
-
-// Call the function to populate the dropdown
 populateSongDropdown();
-
 document.getElementById('songDropdown').addEventListener('change', function() {
-    let selectedGenre = this.value;
-    let songsOfGenre = songsAndGifs.filter(song => song.genre === selectedGenre);
-    if (songsOfGenre.length > 0) {
-        // Get the index of the first song of the selected genre
-        let songIndex = songsAndGifs.indexOf(songsOfGenre[0]);
-        // Call nextSong with the index of the first song of the selected genre
-        nextSong(songIndex);
-    }
+    currentIndex = parseInt(this.value);
+    nextSong(0);
 });
