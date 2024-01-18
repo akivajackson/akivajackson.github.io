@@ -59,7 +59,7 @@ let songsAndGifs = [
         "song": 'Skippers-Lament.mp3',
         "gif": 'DALL·E-2024-01-15-21.57.39---A-chicken-on-a-raft-in-a-Rococo-art-style.-The-image-is-light,-playful,-and-ornate,-with-delicate-colors-and-intricate-details.-The-chicken-is-adorned.png'
     }, {
-        "genre": "(Westernized) Chinese Folklore",
+        "genre": "Chinese-ish Folklore",
         "song": "folk-traditional-chinese-enchanting-The-Adventure-of-the-Chicken-on-the-Raft.mp3",
         "gif": 'DALL·E-2024-01-15-21.56.27---A-chicken-on-a-raft-in-a-traditional-Chinese-ink-wash-painting-style.-The-image-is-elegant-and-minimalistic,-with-fluid-brushstrokes-and-a-focus-on-th.png'
     }, {
@@ -99,7 +99,7 @@ let songsAndGifs = [
         "song": "traditional-maqam-folk-The-Majestic-Chicken.mp3",
         "gif": 'DALL·E-2024-01-15-18.53.21---A-chicken-on-a-raft-in-a-cool-and-sophisticated-jazz-style.-The-chicken-is-stylized-in-a-sleek,-jazzy-manner,-possibly-with-elements-like-a-hat-or-a-s.png'
     }, {
-        "genre": "Upbeat Chinese-ish Folk",
+        "genre": "Upbeat Chinese-ish",
         "song": "upbeat-traditional-chinese-folk-Chicken-on-a-Raft.mp3",
         "gif": 'DALL·E-2024-01-15-21.57.43---A-chicken-on-a-raft-in-a-Pre-Raphaelite-art-style.-The-image-is-rich-in-symbolism-and-natural-detail,-with-an-emphasis-on-beauty-and-emotion.-The-chic.png'
     }, {
@@ -234,15 +234,9 @@ document.addEventListener("visibilitychange", function () {
     }
 });
 
-// Function to populate the song dropdown
 function populateSongDropdown() {
-    // Get the unique genres
     let genres = [...songsAndGifs.map(song => song.genre)];
-
-    // Get the dropdown element
     let dropdown = document.getElementById('songDropdown');
-
-    // Populate the dropdown with the genres
     genres.forEach(genre => {
         let option = document.createElement('option');
         option.value = genre;
