@@ -2,7 +2,7 @@ nav {
     position: fixed;
     background-color: white;
     min-height: 67px;
-    z-index: 100;
+    z-index: 100000;
 
     .header {
         width: fit-content;
