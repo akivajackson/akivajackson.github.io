@@ -1,0 +1,57 @@
+nav {
+    position: fixed;
+    background-color: white;
+    min-height: 67px;
+    z-index: 100;
+
+    .header {
+        width: fit-content;
+    }
+}
+
+nav a {
+    @media (max-width: 768px) {
+        font-size: 0.8em;
+    }
+}
+
+main.container {
+    top: 67px;
+    position: relative;
+}
+
+.icon {
+    height: 19px;
+    position: relative;
+    top: -2px;
+    border-radius: 2px;
+
+    @media (max-width: 768px) {
+        height: .8em;
+    }
+}
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    /*width: 600px;*/
+}
+
+#whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center
+
+}
+
+#whatsapp img {
+    max-width: 200px;
+    border-radius: 5%;
+    &:hover {
+        filter: brightness(0.8);
+        border: 1px solid #000;
+    }
+}
