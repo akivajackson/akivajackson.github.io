@@ -24,18 +24,22 @@ main.container {
     height: 19px;
     position: relative;
     top: -2px;
-    border-radius: 2px;
+    border-radius: 4px;
 
     @media (max-width: 768px) {
         height: .8em;
     }
 }
 
+#facebook-iframe {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 #mc_embed_signup {
     background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-    /*width: 600px;*/
 }
 
 #whatsapp {
