@@ -1,3 +1,6 @@
+body {
+    /*background-color: white;*/
+}
 nav {
     position: fixed;
     background-color: white;
@@ -9,10 +12,21 @@ nav {
     }
 }
 
-nav a {
-    @media (max-width: 768px) {
-        font-size: 0.8em;
+nav {
+    & a {
+        @media (max-width: 768px) {
+            font-size: 0.8em;
+        }
     }
+
+    #navigation-buttons li {
+        padding: 5px 5px;
+    }
+}
+
+nav ul {
+    flex-wrap: wrap;
+
 }
 
 main.container {
@@ -20,6 +34,9 @@ main.container {
     position: relative;
 }
 
+hr {
+    margin: 40px 0;
+}
 .icon {
     height: 19px;
     position: relative;
@@ -54,6 +71,7 @@ main.container {
 #whatsapp img {
     max-width: 200px;
     border-radius: 5%;
+
     &:hover {
         filter: brightness(0.8);
         border: 1px solid #000;
