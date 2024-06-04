@@ -1,6 +1,7 @@
 body {
     /*background-color: white;*/
 }
+
 nav {
     position: fixed;
     background-color: white;
@@ -37,6 +38,7 @@ main.container {
 hr {
     margin: 40px 0;
 }
+
 .icon {
     height: 19px;
     position: relative;
@@ -76,4 +78,35 @@ hr {
         filter: brightness(0.8);
         border: 1px solid #000;
     }
+}
+
+#musicishot {
+    .poster {
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        display: block;
+    }
+
+    .band-image {
+        width: 50%;
+        max-width: 300px;
+        margin: auto;
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    & p {
+        margin: auto;
+        margin-bottom: 2px;
+        max-width: 500px;
+    }
+
+    & h5 {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
 }
