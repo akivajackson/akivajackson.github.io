@@ -8,7 +8,7 @@ author : ["Akiva"]
 categories: ["cooking"]
 tags: ["cooking", "bread"]
 # meta description
-description: "The Best Challah You'll Ever Tastes"
+description: "The Best Challah You'll Ever Taste"
 # save as draft
 draft: false
 ---
