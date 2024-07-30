@@ -5,7 +5,7 @@ draft: false
 image: "images/DALL·E 2024-01-23 14.09.22 - A church bell suspended from an ancient tree, with vines and flowers entwined around it in a misty, mystical forest. The setting adds an air of myster.png"
 description: "This is meta description"
 ---
-*Epistemic status: I think these are all good ideas, and there are lots of people who suggest them, but beware as all tax things are complicated, and I am not an expert by any means.* 
+*Epistemic status: I think these are all good ideas, and there are lots of people who suggest them, but beware as all tax things are complicated, and I am not an expert by any means.*
 
 I understand that these are suggesting giving very large sums of money away. Some of these techniques are even more effective if you're giving less away
 
@@ -42,7 +42,7 @@ You can't take the standard deduction if you take an itemized deduction for char
 Even better if you bunch with someone else! If you and your friend pool your money and one of you donates every 3 years, you get a deduction of ($14,600\*5 + $60,000)/2 = $66,500 each.
 
 #### Donor Advised Funds
-A complicated system with some fees that enables you to give a lot of money at once for tax purposes but then disburse it slowly. Useful if you care a lot about giving the money slowly, and maybe make it easier to give stock.  
+A complicated system with some fees that enables you to give a lot of money at once for tax purposes but then disburse it slowly. Useful if you care a lot about giving the money slowly, and maybe make it easier to give stock. See [here](https://forum.effectivealtruism.org/posts/rWpACQDv5GxgvDx9s/how-to-optimize-your-taxes-as-a-donor-in-the-us-donate) for more information.  
 
 ### 4. Give stocks 
 You then don't pay capital gains and still get the income tax deduction ([Fidelity](https://www.fidelitycharitable.org/articles/4-reasons-to-donate-stock-to-charity.html#:~:text=But%20if%20you%20donate%20the,amount%20allowed%20by%20the%20IRS.)), which can save you 15% of earnings which can be especially good on old, appreciated stocks. Eg if you give $10k in stock that has been invested in the VTI for the past ten years. The cost basis of that is ~$100 and it is worth ~$270 so you would pay almost $1,000 of capital gains tax if you sold that. So it makes it an extra $1k cheaper to donate that $10k, on top of the [income tax savings](#3-have-a-friend-with-a-higher-marginal-tax-rate-give-the-money).
