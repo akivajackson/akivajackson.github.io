@@ -13,10 +13,6 @@ disableLanguages = [] # disable language from here
 # google analytics
 googleAnalytics = "" # example : UA-123-45
 
-#[[config.services.disqus]]
-## disqus short name
-#disqusShortname = "jacksoboy" # get your shortname form here : https://disqus.com
-
 
 ############################## Output ###############################
 [outputs]
