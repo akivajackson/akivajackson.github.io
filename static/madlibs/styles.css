@@ -1,0 +1,183 @@
+/* General Styling */
+body {
+    font-family: 'Lato', sans-serif; /* A modern, clean font */
+    background-color: #f0f4f8; /* Soft background color */
+    color: #333; /* Darker text for readability */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px; /* Softer, more modern corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 300; /* Light weight for a more elegant look */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #666;
+}
+#inputFields {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1em;
+}
+
+/* Input Styling */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff; /* Subtle highlight on focus */
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #4caf50; /* Green with a modern look */
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+#copyStoryBtn, #donateBtn {
+    background-color: #007bff;
+    margin: 10px 5px 20px 5px;
+    padding: 12px 25px;
+}
+
+#copyStoryBtn:hover, #donateBtn:hover {
+    background-color: #0056b3;
+}
+
+#newStoryBtn {
+    background-color: #ff6347; /* Tomato red for the new story button */
+}
+
+#newStoryBtn:hover {
+    background-color: #ff4500;
+}
+
+.story-buttons button {
+    margin: 10px 8px; /* Balanced spacing between buttons */
+}
+
+/* Donate Button - bigger, more visible */
+#donateBtn {
+    font-size: 20px;
+    background-color: #ff6347; /* Bold red to draw attention */
+    padding: 18px 40px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.2s;
+}
+
+#donateBtn:hover {
+    background-color: #ff4500; /* Slightly darker red on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Story Output Styling */
+#storyOutput {
+    margin-top: 30px;
+    text-align: center;
+    background-color: #e9f0fa; /* Soft blue-gray background */
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #d1e3f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: slideDown 0.5s ease-out;
+}
+
+#storyText {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #444; /* Slightly darker for readability */
+}
+
+/* Animation for sliding the story down */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Miscellaneous Styling */
+.hidden {
+    display: none;
+}
+
+#donateContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Story Buttons Container */
+.story-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
