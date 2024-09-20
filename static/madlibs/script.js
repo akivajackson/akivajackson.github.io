@@ -23,7 +23,7 @@ const stories = [
     template: "The concert at MoHo started off with the band playing {adjective1} music, but things quickly took a turn. The lead singer {verb_past1} off the stage, and the drummer replaced their drumsticks with {plural_noun1}. {famous_person} made a surprise appearance, handing out {food1} to the crowd. To keep the fun going, consider donating some {plural_noun2}!"
   },
   {
-    template: "At the Moishe House picnic, everything was going fine until a {adjective1} {animal1} ran through the park and stole all the {plural_noun1}. While we tried to chase it down, {famous_person} arrived with {noun1}, and we ended up {verb_ing1} instead. It was a {adjective1} day in the sun! If you want to stop the {animal1} from stealing our food again, please donate some {plural_noun1}!"
+    template: "At the Moishe House picnic, everything was going fine until a {adjective1} {animal1} ran through the park and stole all the {plural_noun1}. While we tried to chase it down, {famous_person} arrived with a {noun1}, and we ended up {verb_ing1} instead. It was a {adjective1} day in the sun! If you want to stop the {animal1} from stealing our food again, please donate some {plural_noun1}!"
   },
   {
     template: "At the Yiddish class, things got out of hand when {famous_person} showed up to teach us how to say {noun1} in Yiddish. Instead of learning, we spent the whole time {verb_ing1} and trying to find {plural_noun1} hidden around the room. The night ended with everyone laughing and {verb_ing2} in Yiddish! If you want to keep learning Yiddish with us, donate some {plural_noun2} to support our efforts!"
