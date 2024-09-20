@@ -1,2 +1,433 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Akiva Jackson</title><link>https://akivajackson.com/</link><description>Recent content on Akiva Jackson</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 29 Jul 2024 09:54:10 -0500</lastBuildDate><atom:link href="https://akivajackson.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Techniques to make your charitable giving go farther</title><link>https://akivajackson.com/blog/tax-deductions/</link><pubDate>Mon, 29 Jul 2024 09:54:10 -0500</pubDate><guid>https://akivajackson.com/blog/tax-deductions/</guid><description>Epistemic status: I think these are all good ideas, and there are lots of people who suggest them, but beware as all tax things are complicated, and I am not an expert by any means.</description></item><item><title>Automatically Generate Facebook Events</title><link>https://akivajackson.com/blog/facebook-events/</link><pubDate>Tue, 02 Jul 2024 12:18:49 -0400</pubDate><guid>https://akivajackson.com/blog/facebook-events/</guid><description>I live in a house where we run lots of events.</description></item><item><title>The Moishe House Somerville Yiddish Song Book</title><link>https://akivajackson.com/blog/yiddish-song-book/</link><pubDate>Wed, 29 May 2024 18:17:43 -0400</pubDate><guid>https://akivajackson.com/blog/yiddish-song-book/</guid><description>I made this little songbook for my Moishe House with the help of my dear friend Adah Hetko.</description></item><item><title>Ai</title><link>https://akivajackson.com/blog/ai/</link><pubDate>Tue, 16 Jan 2024 09:54:10 -0500</pubDate><guid>https://akivajackson.com/blog/ai/</guid><description>I have been having a lot of fun playing around with AI image generation.</description></item><item><title>Apartment Search Spreadsheet</title><link>https://akivajackson.com/blog/apartment/</link><pubDate>Thu, 03 Nov 2022 15:02:00 -0400</pubDate><guid>https://akivajackson.com/blog/apartment/</guid><description>Searching for apartments, but find it annoying to constantly figure out how far the apartments are from places of interest?</description></item><item><title>Wisdom Teeth: Chuck 'Em?</title><link>https://akivajackson.com/blog/wisdom/</link><pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/wisdom/</guid><description>I&amp;rsquo;m getting my wisdom teeth out this week. My hygienist and two oral surgeons recommended extraction, but you know what?</description></item><item><title>My Mother's Challah Recipe</title><link>https://akivajackson.com/blog/challah/</link><pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/challah/</guid><description>The best challah you&amp;rsquo;ll ever taste.1
-Challah (3 loaves) Ingredients 1 Tbs yeast</description></item><item><title>My Bachelor Thesis: Contradiction &amp; Dichotomy</title><link>https://akivajackson.com/blog/thesis/</link><pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/thesis/</guid><description>My Bachelor Thesis The results of my toils in college: Contradiction &amp;amp; Dichotomy: David Bergelson and Itzik Manger Confront the Bible, an eighty-six page exploration of the badass poetry of Itzik Manger and a fascinating story by David Bergelson.</description></item><item><title>Warring over Yiddish Poetry: Retranslating Morris Rosenfeld as a Political Zionist</title><link>https://akivajackson.com/blog/jp2/</link><pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp2/</guid><description>My second independent project in college: analyzing how the German translation of Morris Rosenfeld&amp;rsquo;s Yiddish sweatshop poetry changd it from a messianic work into political zionist poems.</description></item><item><title>Blossoms from the Dust: A model for salvation</title><link>https://akivajackson.com/blog/jp1/</link><pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp1/</guid><description>Blossoms from the Dust: A model for salvation A close reading of Rainer Maria Rilke&amp;rsquo;s poem Dich wundert nicht des Sturmes Wucht (You are not surprised at the force of the storm).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Akiva Jackson</title><link>https://akivajackson.com/</link><description>Recent content on Akiva Jackson</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 12 Aug 2024 11:25:21 -0400</lastBuildDate><atom:link href="https://akivajackson.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Tisha Beab Music</title><link>https://akivajackson.com/blog/tisha/</link><pubDate>Mon, 12 Aug 2024 11:25:21 -0400</pubDate><guid>https://akivajackson.com/blog/tisha/</guid><description>&lt;figure>
+ &lt;figcaption>Listen to Bore Ad Ana - Ira Rhodes (edited by Akiva Jackson):&lt;/figcaption>
+ &lt;audio controls src="">&lt;/audio>
+ &lt;a href="music/bore-ad-ana-ira-rhodes-edited-by-akiva-jackson-mp3"> Download audio &lt;/a>
+&lt;/figure></description></item><item><title>Techniques to make your charitable giving go farther</title><link>https://akivajackson.com/blog/tax-deductions/</link><pubDate>Mon, 29 Jul 2024 09:54:10 -0500</pubDate><guid>https://akivajackson.com/blog/tax-deductions/</guid><description>&lt;p>&lt;em>Epistemic status: I think these are all good ideas, and there are lots of people who suggest them, but beware as all tax things are complicated, and I am not an expert by any means.&lt;/em>&lt;/p></description></item><item><title>Automatically Generate Facebook Events</title><link>https://akivajackson.com/blog/facebook-events/</link><pubDate>Tue, 02 Jul 2024 12:18:49 -0400</pubDate><guid>https://akivajackson.com/blog/facebook-events/</guid><description>&lt;p>I live in a house where we run &lt;a href="https://akivajackson.com/moho/">lots of events&lt;/a>. I don&amp;rsquo;t love typing in all the details for each event, so I wrote a script to do it for me.&lt;/p></description></item><item><title>The Moishe House Somerville Yiddish Song Book</title><link>https://akivajackson.com/blog/yiddish-song-book/</link><pubDate>Wed, 29 May 2024 18:17:43 -0400</pubDate><guid>https://akivajackson.com/blog/yiddish-song-book/</guid><description>&lt;p>I made this little songbook for my Moishe House with the help of my dear friend &lt;a href="https://www.adahhetko.net/">Adah Hetko&lt;/a>.
+
+&lt;script src= '/js/pdf-js/build/pdf.js'>&lt;/script>
+&lt;style>
+#the-canvas {
+ border: 1px solid black;
+ direction: ltr;
+ width: 100%;
+ height: auto;
+ display: none;
+}
+
+#paginator {
+ display: none;
+ text-align: center;
+ margin-bottom: 10px;
+}
+
+#loadingWrapper {
+ display: none;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 350px;
+}
+
+#loading {
+ display: inline-block;
+ width: 50px;
+ height: 50px;
+ border: 3px solid #d2d0d0;;
+ border-radius: 50%;
+ border-top-color: #383838;
+ animation: spin 1s ease-in-out infinite;
+ -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+ to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+ to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>
+
+&lt;div id="paginator">
+ &lt;button id="prev">Previous&lt;/button>
+ &lt;button id="next">Next&lt;/button>
+ &amp;nbsp; &amp;nbsp;
+ &lt;span>Page: &lt;span id="page_num">&lt;/span> / &lt;span id="page_count">&lt;/span>&lt;/span>
+&lt;/div>
+&lt;div id="embed-pdf-container">
+ &lt;div id="loadingWrapper">
+ &lt;div id="loading">&lt;/div>
+ &lt;/div>
+ &lt;canvas id="the-canvas">&lt;/canvas>
+&lt;/div>
+
+&lt;script type="text/javascript">
+window.onload = function() {
+
+
+var url = "https:\/\/akivajackson.com\/" + '.\/pdfs\/Moishe House Somerville—Yiddish Shabbes Songbook v1 (Feb 2024).pdf';
+
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+
+
+
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/akivajackson.com\/" + '/js/pdf-js/build/pdf.worker.js';
+
+
+var pdfDoc = null,
+ pageNum = selectedPageNum,
+ pageRendering = false,
+ pageNumPending = null,
+ scale = 3,
+ canvas = document.getElementById('the-canvas'),
+ ctx = canvas.getContext('2d'),
+ paginator = document.getElementById("paginator"),
+ loadingWrapper = document.getElementById('loadingWrapper');
+
+
+
+showPaginator();
+showLoader();
+
+
+
+function renderPage(num) {
+ pageRendering = true;
+ 
+ pdfDoc.getPage(num).then(function(page) {
+ var viewport = page.getViewport({scale: scale});
+ canvas.height = viewport.height;
+ canvas.width = viewport.width;
+
+ 
+ var renderContext = {
+ canvasContext: ctx,
+ viewport: viewport
+ };
+ var renderTask = page.render(renderContext);
+
+ 
+ renderTask.promise.then(function() {
+ pageRendering = false;
+ showContent();
+ 
+ if (pageNumPending !== null) {
+ 
+ renderPage(pageNumPending);
+ pageNumPending = null;
+ }
+ });
+ });
+
+ 
+ document.getElementById('page_num').textContent = num;
+}
+
+
+
+function showContent() {
+ loadingWrapper.style.display = 'none';
+ canvas.style.display = 'block';
+}
+
+
+
+function showLoader() {
+ if(hideLoader) return
+ loadingWrapper.style.display = 'flex';
+ canvas.style.display = 'none';
+}
+
+
+
+function showPaginator() {
+ if(hidePaginator) return
+ paginator.style.display = 'block';
+}
+
+
+
+function queueRenderPage(num) {
+ if (pageRendering) {
+ pageNumPending = num;
+ } else {
+ renderPage(num);
+ }
+}
+
+
+
+function onPrevPage() {
+ if (pageNum &lt;= 1) {
+ return;
+ }
+ pageNum--;
+ queueRenderPage(pageNum);
+}
+document.getElementById('prev').addEventListener('click', onPrevPage);
+
+
+
+function onNextPage() {
+ if (pageNum >= pdfDoc.numPages) {
+ return;
+ }
+ pageNum++;
+ queueRenderPage(pageNum);
+}
+document.getElementById('next').addEventListener('click', onNextPage);
+
+
+
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+ pdfDoc = pdfDoc_;
+ var numPages = pdfDoc.numPages;
+ document.getElementById('page_count').textContent = numPages;
+ 
+ 
+ if(pageNum > numPages) {
+ pageNum = numPages
+ }
+
+ 
+ renderPage(pageNum);
+});
+}
+
+&lt;/script>
+ &lt;!-- path starts in static -->&lt;/p></description></item><item><title>Ai</title><link>https://akivajackson.com/blog/ai/</link><pubDate>Tue, 16 Jan 2024 09:54:10 -0500</pubDate><guid>https://akivajackson.com/blog/ai/</guid><description>&lt;p>I have been having a lot of fun playing around with AI image generation. Here are some of my favorites.
+
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2023-12-25-22.09.34---A-surreal-and-imaginative-portrayal-of-a-rabbi-with-a-dumpling-for-a-head,-in-the-style-of-Peter-Paul-Rubens.-The-rabbi,-dressed-in-traditional-attire.png" alt="DALL·E-2023-12-25-22.09.34&amp;mdash;A-surreal-and-imaginative-portrayal-of-a-rabbi-with-a-dumpling-for-a-head,-in-the-style-of-Peter-Paul-Rubens.-The-rabbi,-dressed-in-traditional-attire.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2023-12-26-18.58.33---A-whimsical-painting-of-a-dove-portrayed-as-a-Hasidic-Rebbe.-The-dove-is-anthropomorphized,-exuding-peace-and-gentleness,-and-dressed-in-traditional-H.png" alt="DALL·E-2023-12-26-18.58.33&amp;mdash;A-whimsical-painting-of-a-dove-portrayed-as-a-Hasidic-Rebbe.-The-dove-is-anthropomorphized,-exuding-peace-and-gentleness,-and-dressed-in-traditional-H.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2023-12-27-13.54.23---A-portrait-of-a-postman,-translucent-and-ethereal-in-appearance,-suggesting-the-form-of-a-ghost.-His-uniform-is-faintly-visible,-with-the-cap-reading-.png" alt="DALL·E-2023-12-27-13.54.23&amp;mdash;A-portrait-of-a-postman,-translucent-and-ethereal-in-appearance,-suggesting-the-form-of-a-ghost.-His-uniform-is-faintly-visible,-with-the-cap-reading-.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2023-12-29-14.37.44---An-Art-Nouveau-painting-inspired-by-Psalm-65_12-13,-depicting-a-flowering-desert.-The-artwork-should-showcase-the-flowing,-natural-lines-and-organic-f.png" alt="DALL·E-2023-12-29-14.37.44&amp;mdash;An-Art-Nouveau-painting-inspired-by-Psalm-65_12-13,-depicting-a-flowering-desert.-The-artwork-should-showcase-the-flowing,-natural-lines-and-organic-f.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2023-12-29-15.00.07---An-Art-Nouveau-style-painting-depicting-a-woman-performing-the-Kiddush-ceremony.-The-central-focus-is-a-uniquely-designed-wine-glass,-artistically-dep.png" alt="DALL·E-2023-12-29-15.00.07&amp;mdash;An-Art-Nouveau-style-painting-depicting-a-woman-performing-the-Kiddush-ceremony.-The-central-focus-is-a-uniquely-designed-wine-glass,-artistically-dep.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-02-14.48.09---A-one-color-graffiti-drawing-of-a-bunny,-done-in-a-quick-street-style-on-the-side-of-an-MBTA-(Massachusetts-Bay-Transportation-Authority)-train.-The-a.png" alt="DALL·E-2024-01-02-14.48.09&amp;mdash;A-one-color-graffiti-drawing-of-a-bunny,-done-in-a-quick-street-style-on-the-side-of-an-MBTA-(Massachusetts-Bay-Transportation-Authority)-train.-The-a.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-02-16.29.00---Redo-the-Art-Deco-style-painting-of-a-Fitness-Guru-Bunny-in-a-gym,-ensuring-all-the-gym-goers-in-the-background-are-different-animals-and-that-there-a.png" alt="DALL·E-2024-01-02-16.29.00&amp;mdash;Redo-the-Art-Deco-style-painting-of-a-Fitness-Guru-Bunny-in-a-gym,-ensuring-all-the-gym-goers-in-the-background-are-different-animals-and-that-there-a.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-03-10.32.13---Redo-the-Art-Nouveau-painting-to-capture-a-programmer-who-is-much-more-visibly-upset-upon-realizing-his-code-doesn't-work-because-he-used-ChatGPT.-The.png" alt="DALL·E-2024-01-03-10.32.13&amp;mdash;Redo-the-Art-Nouveau-painting-to-capture-a-programmer-who-is-much-more-visibly-upset-upon-realizing-his-code-doesn&amp;rsquo;t-work-because-he-used-ChatGPT.-The.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-03-10.40.17---Create-an-Art-Nouveau-painting-that-captures-the-moment-a-programmer-realizes-his-code-doesn't-work-because-he-used-ChatGPT-to-write-it.-The-scene-is-.png" alt="DALL·E-2024-01-03-10.40.17&amp;mdash;Create-an-Art-Nouveau-painting-that-captures-the-moment-a-programmer-realizes-his-code-doesn&amp;rsquo;t-work-because-he-used-ChatGPT-to-write-it.-The-scene-is-.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-03-16.40.35---A-photograph-of-a-bunny-dressed-as-the-Pope.-The-image-should-depict-a-bunny-in-traditional-papal-attire,-including-a-white-cassock,-papal-tiara-or-mi.png" alt="DALL·E-2024-01-03-16.40.35&amp;mdash;A-photograph-of-a-bunny-dressed-as-the-Pope.-The-image-should-depict-a-bunny-in-traditional-papal-attire,-including-a-white-cassock,-papal-tiara-or-mi.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-04-12.46.18---A-minimalist-photograph-of-a-bunny-with-a-miniature-laptop.-The-image-should-focus-on-the-bunny-sitting-upright,-holding-a-tiny-laptop-in-its-paws.-Th.png" alt="DALL·E-2024-01-04-12.46.18&amp;mdash;A-minimalist-photograph-of-a-bunny-with-a-miniature-laptop.-The-image-should-focus-on-the-bunny-sitting-upright,-holding-a-tiny-laptop-in-its-paws.-Th.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-04-13.01.24---Create-the-second-version-of-a-photograph-of-a-bunny-with-a-bunny-sized-VR-headset.-In-this-image,-the-bunny-should-be-depicted-in-a-different-pose,-p.png" alt="DALL·E-2024-01-04-13.01.24&amp;mdash;Create-the-second-version-of-a-photograph-of-a-bunny-with-a-bunny-sized-VR-headset.-In-this-image,-the-bunny-should-be-depicted-in-a-different-pose,-p.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-05-14.07.37---A-sculpture-of-a-fox-made-entirely-of-spoons.-The-image-should-depict-a-creatively-assembled-fox,-where-each-part-of-its-body-is-constructed-from-spoo.png" alt="DALL·E-2024-01-05-14.07.37&amp;mdash;A-sculpture-of-a-fox-made-entirely-of-spoons.-The-image-should-depict-a-creatively-assembled-fox,-where-each-part-of-its-body-is-constructed-from-spoo.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-08-16.32.14---A-photograph-of-an-enormous-space-bunny-playfully-biting-the-Earth.-The-bunny,-gigantic-in-scale,-is-set-against-the-dark-backdrop-of-outer-space.-It-.png" alt="DALL·E-2024-01-08-16.32.14&amp;mdash;A-photograph-of-an-enormous-space-bunny-playfully-biting-the-Earth.-The-bunny,-gigantic-in-scale,-is-set-against-the-dark-backdrop-of-outer-space.-It-.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-09-11.21.19---A-realistic-4K-photograph,-as-if-from-Flickr,-of-a-bunny-in-a-hazmat-suit.-The-photograph-depicts-a-real-bunny-dressed-in-a-miniature-bright-yellow-ha.png" alt="DALL·E-2024-01-09-11.21.19&amp;mdash;A-realistic-4K-photograph,-as-if-from-Flickr,-of-a-bunny-in-a-hazmat-suit.-The-photograph-depicts-a-real-bunny-dressed-in-a-miniature-bright-yellow-ha.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-09-13.37.41---A-surreal-painting-depicting-a-human-body-under-the-skin,-with-all-the-sinews,-bones,-and-organs-made-out-of-vegetables.-The-painting-reveals-an-anato.png" alt="DALL·E-2024-01-09-13.37.41&amp;mdash;A-surreal-painting-depicting-a-human-body-under-the-skin,-with-all-the-sinews,-bones,-and-organs-made-out-of-vegetables.-The-painting-reveals-an-anato.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-09-14.33.18---A-painting-depicting-a-den-from-the-19th-century-filled-with-rhinoceroses-lounging-on-pillows-and-smoking-long-pipes.-The-scene-portrays-the-rhinocero.png" alt="DALL·E-2024-01-09-14.33.18&amp;mdash;A-painting-depicting-a-den-from-the-19th-century-filled-with-rhinoceroses-lounging-on-pillows-and-smoking-long-pipes.-The-scene-portrays-the-rhinocero.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-09-16.01.43---An-Art-Nouveau-inspired-poster-featuring-a-klezmer-trio.-The-trio-includes-a-man-with-big-tight-curly-brown-hair-playing-an-upright-bass,-a-woman-with.png" alt="DALL·E-2024-01-09-16.01.43&amp;mdash;An-Art-Nouveau-inspired-poster-featuring-a-klezmer-trio.-The-trio-includes-a-man-with-big-tight-curly-brown-hair-playing-an-upright-bass,-a-woman-with.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-10-14.30.44---A-photograph-capturing-a-galactic-otter,-made-of-stars-and-nebulas,-lovingly-hugging-the-Earth.-The-otter's-body-glows-with-the-light-of-distant-galax.png" alt="DALL·E-2024-01-10-14.30.44&amp;mdash;A-photograph-capturing-a-galactic-otter,-made-of-stars-and-nebulas,-lovingly-hugging-the-Earth.-The-otter&amp;rsquo;s-body-glows-with-the-light-of-distant-galax.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-10-15.20.08---The-Renaissance-otter-standing-beside-a-window,-gazing-thoughtfully-outside.-The-window-reveals-a-Renaissance-cityscape.-The-otter's-outfit-is-richly-.png" alt="DALL·E-2024-01-10-15.20.08&amp;mdash;The-Renaissance-otter-standing-beside-a-window,-gazing-thoughtfully-outside.-The-window-reveals-a-Renaissance-cityscape.-The-otter&amp;rsquo;s-outfit-is-richly-.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-10-17.25.58---An-abstract-art-piece-that-captures-the-essence-of-the-half-elephant,-half-otter-god-through-expressive-shapes-and-colors-rather-than-literal-represen.png" alt="DALL·E-2024-01-10-17.25.58&amp;mdash;An-abstract-art-piece-that-captures-the-essence-of-the-half-elephant,-half-otter-god-through-expressive-shapes-and-colors-rather-than-literal-represen.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-11-16.45.05---Two-enormous-Shabbat-candles,-towering-and-majestic,-emerging-from-behind-the-snow-capped-peaks-of-the-Alps.-The-scene-is-set-during-twilight,-casting.png" alt="DALL·E-2024-01-11-16.45.05&amp;mdash;Two-enormous-Shabbat-candles,-towering-and-majestic,-emerging-from-behind-the-snow-capped-peaks-of-the-Alps.-The-scene-is-set-during-twilight,-casting.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-11-18.32.12---A-dynamic-courtroom-scene-in-the-style-of-Rubens.-The-deer-lawyer-is-at-the-center,-addressing-a-jury-of-various-animals,-dressed-in-elaborate-17th-ce.png" alt="DALL·E-2024-01-11-18.32.12&amp;mdash;A-dynamic-courtroom-scene-in-the-style-of-Rubens.-The-deer-lawyer-is-at-the-center,-addressing-a-jury-of-various-animals,-dressed-in-elaborate-17th-ce.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-11-18.32.36---An-allegorical-painting-in-Rubens'-style,-with-the-deer-lawyer-representing-justice-or-wisdom.-It's-surrounded-by-symbolic-elements-like-scales,-books.png" alt="DALL·E-2024-01-11-18.32.36&amp;mdash;An-allegorical-painting-in-Rubens&amp;rsquo;-style,-with-the-deer-lawyer-representing-justice-or-wisdom.-It&amp;rsquo;s-surrounded-by-symbolic-elements-like-scales,-books.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-11-18.32.49---A-Rubens-esque-battle-scene,-showing-the-deer-lawyer-in-a-metaphorical-battle-of-wits.-Clad-in-ornate-armor,-wielding-a-quill-like-a-sword,-surrounded.png" alt="DALL·E-2024-01-11-18.32.49&amp;mdash;A-Rubens-esque-battle-scene,-showing-the-deer-lawyer-in-a-metaphorical-battle-of-wits.-Clad-in-ornate-armor,-wielding-a-quill-like-a-sword,-surrounded.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-15-15.37.19---An-underwater-scene-with-the-Pekingese-Man-o'-War-Jellyfish-as-the-central-figure.-Its-tentacles-resemble-the-flowing-fur-of-a-Pekingese,-and-its-bell.png" alt="DALL·E-2024-01-15-15.37.19&amp;mdash;An-underwater-scene-with-the-Pekingese-Man-o&amp;rsquo;-War-Jellyfish-as-the-central-figure.-Its-tentacles-resemble-the-flowing-fur-of-a-Pekingese,-and-its-bell.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-15-15.40.17---A-Buffaloon_-a-buffalo-combined-with-a-balloon,-a-large,-floaty-creature-that-gently-drifts-across-the-plains.-This-surreal-image-depicts-the-buffalo-.png" alt="DALL·E-2024-01-15-15.40.17&amp;mdash;A-Buffaloon_-a-buffalo-combined-with-a-balloon,-a-large,-floaty-creature-that-gently-drifts-across-the-plains.-This-surreal-image-depicts-the-buffalo-.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/DALL%C2%B7E-2024-01-15-15.44.39---A-Raccoonicorn-in-an-art-nouveau-style.-The-image-captures-the-elegance-and-decorative-beauty-of-the-raccoonicorn,-with-flowing-lines-and-floral-motif.png" alt="DALL·E-2024-01-15-15.44.39&amp;mdash;A-Raccoonicorn-in-an-art-nouveau-style.-The-image-captures-the-elegance-and-decorative-beauty-of-the-raccoonicorn,-with-flowing-lines-and-floral-motif.png">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/_447f1bdb-19b0-4105-8e02-adae2333a323.jpeg" alt="_447f1bdb-19b0-4105-8e02-adae2333a323.jpeg">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/_76ed845a-7a54-4d77-822a-26d22121934a.jpeg" alt="_76ed845a-7a54-4d77-822a-26d22121934a.jpeg">
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="https://akivajackson.com/images/dalle/bunny-programmer.jpeg" alt="bunny-programmer.jpeg">
+ 
+&lt;/p></description></item><item><title>Apartment Search Spreadsheet</title><link>https://akivajackson.com/blog/apartment/</link><pubDate>Thu, 03 Nov 2022 15:02:00 -0400</pubDate><guid>https://akivajackson.com/blog/apartment/</guid><description>&lt;p>Searching for apartments, but find it annoying to constantly figure out how far the apartments are from places of interest? Just plug in the addresses to this spreadsheet and it will do all the annoying calculation for you.&lt;/p></description></item><item><title>Wisdom Teeth: Chuck 'Em?</title><link>https://akivajackson.com/blog/wisdom/</link><pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/wisdom/</guid><description>&lt;p>I&amp;rsquo;m getting my wisdom teeth out this week. My hygienist and two oral surgeons recommended extraction, but you know what? Did I trust them? Well, sorta.&lt;/p></description></item><item><title>My Mother's Challah Recipe</title><link>https://akivajackson.com/blog/challah/</link><pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/challah/</guid><description>&lt;!-- ![](/images/challah.jpg) -->
+&lt;p>The best challah you&amp;rsquo;ll ever taste.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;h3 id="challah-3-loaves">Challah (3 loaves)&lt;/h3>
+&lt;p>&lt;strong>Ingredients&lt;/strong> &lt;br>&lt;br>
+1 Tbs yeast&lt;br>
+1.5 C warm water&lt;br>
+3 eggs&lt;br>
+~5-6 cups flour (you can do all white, half-half, or 1/4 whole wheat)&lt;br>
+1 TBs salt&lt;br>
+1/3 C oil&lt;br>
+1/2 C sugar &lt;br>&lt;br>&lt;/p></description></item><item><title>My Bachelor Thesis: Contradiction &amp; Dichotomy</title><link>https://akivajackson.com/blog/thesis/</link><pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/thesis/</guid><description>&lt;h3 id="my-bachelor-thesis">My Bachelor Thesis&lt;/h3>
+&lt;p>The results of my toils in college: &lt;em>Contradiction &amp;amp; Dichotomy: David Bergelson and Itzik Manger Confront the Bible&lt;/em>, an eighty-six page exploration of the badass poetry of Itzik Manger and a fascinating story by David Bergelson.&lt;/p></description></item><item><title>Warring over Yiddish Poetry: Retranslating Morris Rosenfeld as a Political Zionist</title><link>https://akivajackson.com/blog/jp2/</link><pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp2/</guid><description>&lt;p>My second independent project in college: analyzing how the German translation of Morris Rosenfeld&amp;rsquo;s Yiddish sweatshop poetry changd it from a messianic work into political zionist poems.&lt;/p></description></item><item><title>Blossoms from the Dust: A model for salvation</title><link>https://akivajackson.com/blog/jp1/</link><pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp1/</guid><description>&lt;h3 id="blossoms-from-the-dust-a-model-for-salvation">Blossoms from the Dust: A model for salvation&lt;/h3>
+&lt;p>A close reading of Rainer Maria Rilke&amp;rsquo;s poem &lt;em>Dich wundert nicht des Sturmes Wucht&lt;/em> (You are not surprised at the force of the storm).&lt;/p></description></item></channel></rss>

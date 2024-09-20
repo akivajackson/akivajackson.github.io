@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moishe House Event Mad Libs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Moishe House Event Mad Libs</h1>
+        <p>Fill out the form to create your own version of our Moishe House event story, and raise money for our <a href="https://donate.moishehouse.org/team/603229">September
+            campaign, WE ARE</a>!</p>
+
+        <!-- Story Output Section -->
+        <div id="storyOutput" class="hidden">
+            <h2>Your Moishe House Event Story</h2>
+            <p id="storyText"></p>
+            <div class="story-buttons">
+                <button id="copyStoryBtn">Copy Story to Clipboard</button>
+                <button id="newStoryBtn" class="new-story-btn">Create New Story</button>
+            </div>
+        </div>
+
+        <!-- Donate Button -->
+        <div id="donateContainer" class="hidden">
+            <button id="donateBtn" class="donate-btn">Donate and Paste Story</button>
+        </div>
+
+        <!-- Form Section -->
+        <div id="storyGenerator">
+            <form id="madLibForm">
+                <div id="inputFields"></div>
+                <button type="submit">Create Story!</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
