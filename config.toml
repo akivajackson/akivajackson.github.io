@@ -1,7 +1,9 @@
 ######################## default configuration ####################
 baseURL = "https://akivajackson.com"
 title = "Akiva Jackson"
-theme =  "twenty-twenty-hugo" #"showfolio" "PaperMod" # MAKE SURE TO REMOVE LAYOUTS STUFF IF I'm changing this 
+theme = "twenty-twenty-hugo" 
+#theme = "showfolio" 
+#theme = "twenty-twenty-hugo" #"ananke"# "twenty-twenty-hugo" #"showfolio" "PaperMod" # MAKE SURE TO REMOVE LAYOUTS STUFF IF I'm changing this 
 languageName = "En"
 languageCode = "en-us"
 # post excerpt
