@@ -4,14 +4,15 @@ title = "Akiva Jackson"
 theme =  "twenty-twenty-hugo" #"showfolio" "PaperMod" # MAKE SURE TO REMOVE LAYOUTS STUFF IF I'm changing this 
 languageName = "En"
 languageCode = "en-us"
-# post pagination
-paginate = "6"
 # post excerpt
 summaryLength = "10"
 # disable language
 disableLanguages = [] # disable language from here
 # google analytics
 googleAnalytics = "" # example : UA-123-45
+# post pagination
+[pagination]
+pagerSize = "6"
 
 
 ############################## Output ###############################
@@ -83,7 +84,6 @@ description = "This is meta description"
 author = "Themefisher"
 
 # favicon
-[params.favicon]
 favicon = "images/favicon.png"
 
 # cookies
