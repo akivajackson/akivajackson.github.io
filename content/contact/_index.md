@@ -7,4 +7,4 @@ description: "This is meta description"
 draft: false
 ---
 
-Email me at akivajackson@gmail.com
+Email me at akivajackson {at} gmail

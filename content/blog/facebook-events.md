@@ -2,6 +2,7 @@
 title: "Automatically Generate Facebook Events"
 date: 2024-07-02T12:18:49-04:00
 draft: false
+image: "images/DALL·E 2024-03-20 00.00.43 - An elegant scene under the canopy of a lush, green park, with flowing lines and natural forms creating the backdrop for a sophisticated picnic setting.png" 
 ---
 
 I live in a house where we run [lots of events](https://akivajackson.com/moho/). I don't love typing in all the details for each event, so I wrote a script to do it for me.
