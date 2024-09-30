@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🕑 Focus Timer App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>🕑 Focus Timer App</h1>
+
+
+<button id="start-btn" title="Start Timer">▶️ Start</button>
+
+<div id="task-input">
+  <input type="text" id="task-entry" placeholder="Type a task, e.g., 'Do laundry 1.5h'" autofocus>
+  <button id="add-task-btn" title="Add Task">➕</button>
+</div>
+
+<div class="controls-container">
+  <label>
+    <input type="checkbox" id="toggle-completed">
+    Show Completed Tasks
+  </label>
+  <label>
+    <input type="checkbox" id="toggle-todoist-tasks-checkbox" checked>
+    Show Todoist Tasks
+  </label>
+  <label for="sort-tasks-select">Sort Tasks By:
+    <select id="sort-tasks-select">
+      <option value="priority">Priority</option>
+      <option value="due-time">Due Time</option>
+      <option value="filter-order">Filter Order</option>
+    </select>
+  </label>
+  <select id="filter-priority-select">
+    <option value="">Filter by Priority</option>
+    <option value="4">Priority 1</option>
+    <option value="3">Priority 2</option>
+    <option value="2">Priority 3</option>
+    <option value="1">Priority 4</option>
+  </select>
+    <input type="text" id="filter-input" placeholder="Enter filters, separated by commas">
+    <button id="save-filter-btn" title="Save Filter">💾 Save Filter</button>
+  <select id="saved-filters-dropdown">
+    <option value="">Select a saved filter</option>
+  </select>
+
+  
+  <div id="refresh-icon" class="refresh-icon">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+      <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+    </svg>
+  </div>
+</div>
+
+<ul id="task-list"></ul>
+
+
+<!-- Todoist API Token Input -->
+<div id="todoist-auth">
+  <input type="password" id="todoist-token" placeholder="Enter Todoist API Token">
+  <button id="save-token-btn" title="Save Token">🔒 Save</button>
+  <button id="refresh-todoist-btn" title="Refresh Tasks">🔄 Refresh Tasks</button>
+  <p id="todoist-status"></p>
+</div>
+<div id="toast-container"></div>
+<!-- SortableJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<template id="pip-template">
+  <link rel="stylesheet" href="css/pip-styles.css">
+  <div id="pip-timer-header">
+    <span id="pip-task-name"></span>
+  </div>
+  <div id="pip-timer-controls">
+    <button id="pip-pause-btn">⏸️</button>
+    <div id="pip-timer-display"></div>
+    <button id="pip-complete-btn">✔️</button>
+  </div>
+</template>

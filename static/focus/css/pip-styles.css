@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c34;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*padding: 20px;*/
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#pip-timer-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: move;
+  /*background-color: #3a3f47;*/
+  border-radius: 10px 10px 0 0;
+}
+
+#pip-timer-header span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#pip-timer-header .draggable-indicator {
+  font-size: 18px;
+  cursor: grab;
+}
+
+#pip-timer-display {
+  font-size: 36px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+#pip-timer-controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 20px;
+}
+
+#pip-timer-controls button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #61dafb;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+#pip-timer-controls button:hover {
+  transform: scale(1.1);
+}
+
+#pip-timer-controls button:active {
+  transform: scale(1.05);
+}
+
+
+#pip-pause-btn {
+   /*filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(140deg) brightness(90%) contrast(90%);*/
+  filter:hue-rotate(316deg) saturate(100%);
+
+}
+
+#pip-complete-btn {
+  filter: brightness(0) saturate(100%)  invert(25%) sepia(57%) saturate(3331%) hue-rotate(163deg) brightness(93%) contrast(101%);
+}
+
+#pip-pause-btn, #pip-complete-btn {
+  /*filter: brightness(0) saturate(100%)  invert(25%) sepia(57%) saturate(3331%) hue-rotate(163deg) brightness(93%) contrast(101%);*/
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+body.paused {
+  background: linear-gradient(270deg, #61dafb, #282c34, #61dafb);
+  background-size: 200% 200%;
+  animation: gradientWave 2s linear infinite;
+}
