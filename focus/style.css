@@ -1,0 +1,318 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Todoist Authentication */
+#todoist-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#todoist-auth input {
+  width: 300px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 2px solid #ff9800;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+#todoist-auth input:focus {
+  border-color: #e68900;
+}
+
+#save-token-btn, #refresh-todoist-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 2px solid #ff9800;
+  background-color: #ff9800;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#save-token-btn:hover, #refresh-todoist-btn:hover {
+  background-color: #e68900;
+}
+
+#refresh-todoist-btn {
+  margin-left: 10px;
+  border-radius: 0 4px 4px 0;
+}
+
+#todoist-status {
+  margin-left: 15px;
+  font-size: 14px;
+  color: #4caf50;
+}
+
+/* Task Input */
+#task-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#task-input input {
+  width: 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+#task-input input:focus {
+  border-color: #0056b3;
+}
+
+#add-task-btn {
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 2px solid #007bff;
+  border-left: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+  background-color: #0056b3;
+}
+
+.controls-container {
+  display: flex;
+  flex-wrap: wrap;
+    justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.controls-container label,
+.controls-container select {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.controls-container select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+.controls-container label[for="sort-tasks-select"] {
+  margin-right: 5px;
+  font-weight: bold;
+}
+#sort-tasks-select {
+  margin-left: 10px;
+}
+.controls-container input[type="checkbox"],
+.controls-container input[type="radio"] {
+  margin-right: 5px;
+}
+
+.controls-container select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.refresh-icon {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  cursor: pointer;
+}
+
+.refresh-icon svg {
+  fill: #333;
+}
+
+.refresh-icon.rotating svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); } /* Change to -360deg for counterclockwise rotation */
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#filter-input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#toggle-completed {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* Task List */
+#task-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.task-item {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: background-color 0.3s;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+}
+
+.draggable-indicator {
+  font-size: 18px;
+  cursor: grab;
+  margin-right: 10px;
+}
+
+.task-content {
+  flex-grow: 1;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.task-content.editable:focus {
+  border-bottom: 2px dashed #007bff;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.task-actions button:hover {
+  transform: scale(1.2);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Start Button */
+#start-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#start-btn:hover {
+  background-color: #218838;
+}
+
+.priority-circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.priority-circle[title="Complete Task"] {
+  border-color: #ccc;
+}
+
+.task-item .task-content.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.due-time {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.task-duration {
+  font-style: italic;
+  color: #888; /* Slightly greyer color */
+  margin-left: 5px; /* Optional: Add some space between the task name and duration */
+}
+
+.default-duration {
+  color: #cbcbcb; /* Even lighter grey for default durations */
+}
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+  opacity: 1;
+}
