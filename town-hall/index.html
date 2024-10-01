@@ -6,7 +6,7 @@
     <title>Zagaran Town Hall Satirical Referendum</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Nunito Sans', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
@@ -26,6 +26,7 @@
             background-color: #fff;
             padding: 20px 30px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
         }
 
         h1, h2 {
@@ -38,29 +39,52 @@
         }
 
         .question {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 100px;
+        }
+
+        .question img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
         }
 
         .question h3 {
             margin-bottom: 10px;
+            font-size: 1.1em;
         }
 
         .options label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             cursor: pointer;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .options label:hover {
+            background-color: #f0f0f0;
         }
 
         .submit-btn {
             display: block;
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background-color: #28a745;
             color: #fff;
             border: none;
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         .submit-btn:hover {
@@ -99,10 +123,23 @@
             cursor: pointer;
             border-radius: 5px;
             margin-top: 20px;
+            transition: background-color 0.3s;
         }
 
         .close-btn:hover {
             background-color: #c82333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .question {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .question img {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -116,54 +153,73 @@
         <h2>We Value Your Opinion!</h2>
         <p>Please participate in our referendum by answering the following important questions:</p>
         <form id="referendum-form">
+            <!-- Question 1 -->
             <div class="question">
-                <h3>1. By what percentage should we increase our Nerf gun arsenal to ensure Alvin can defend his title as the “wearer of many hats”?</h3>
+                <img                   src="https://zagaran-website.s3.amazonaws.com/internal/employees/photos/Alvin_Siu_Y-m-d_1292b302-caa0-4aee-a0b7-ad2c8fa914a7.pdf?AWSAccessKeyId=ASIAXRPW5PDG2KZLF73F&amp;Signature=SaUcvjwcGvUbLXLKknlkswCR6HI%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEEcaCXVzLWVhc3QtMSJHMEUCIQCZEHbvybz2Voq7zL1q028oBdYDZejQUXuK%2F6MxKIkSkgIgDKTeJMmRALuHR4D4rugoJfphUJk23T1pQ%2FiNBy0DIrcquwUIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw1MTg1OTgyNjA5NDEiDJfKa1kJSlFB4%2FLfQiqPBZm%2Bc4Y7zFyigj3FE5Gq49DaT%2BIpf9YP8TvfqIdExkdVhbq1kLuJNXbWPTRYFetuGJneCmDCdrPoAlCgvollmbpJnT%2FC98aGG857EO5X7bor3hfT%2FxOHTtGbVuIok3dI3BhCEcHRu11VLnFq%2FUW%2F0lasfh90vtDzFE2NexWjJU5SKShIn4z2dYSGmG7%2FWEFRLWlUgWhTV%2BDWO%2FlrBfsPfSCYkA8taoye8ovHSNGZ3oQr1XkOylD2OI3IyvoV3Mxdkd8g3dmsi2vEvKOYTRonmBXCB2ZWh2Y%2B3e7P2yLB42X60TpPREX%2BYgP1PQJHOt%2FF%2Bw%2BZU0L0YQhb7atX5Bv2Zs1qHKDC6LLXNd7b96DVFKBKJomrhvGoUqr%2FWgB1KlbdevM0DMl%2B1R1Ca1iSjTakf1c4rE4j7EAd75PGTW0L7p5%2FJTAkeKQg6Xig3EV5w3%2Fk8dLKHIHEifu7xYfGtCZMTGASypwZ8t0PDUu8GDlIoIYZOP65F5mqvWVZ%2BVfJfmnK2tSLDKyTbF0C79aofRH5kvK1ku2HCE%2Bhuzd2ixG%2FE9SwdDTykUPNalBGsDH0hHfpimxFCMh4MDdFhY7g2%2B%2FB9TkNS1f7DYdsTxzp9By1Ab6FtxejYXqoeDSd7sJ8LyM1bhFlSBwXEwFtXKhXuHfeNSAuMSD9lHe%2FiuhqycxDslRcnw1Zy%2BRme1aarV8rR7AS5CgNN09lX1KHCDMAAGDuiWmHCd8NEgWWv%2B76ozQAOEZiELfTEd3VL6nXypnTfmTmwh4P464BFLI8I5OjcS9dkF1oRp10vtVh90%2FqiYRyiJ2VfnMS9VD5gne1noiO5%2BE%2FKO%2F4XITjK1KpaLHGI8K0leU1y%2FePU4BF78mMbG8hsnownoXwtwY6sQEJAqNFpO%2BsB3GQrNlIUftV1DApFlzf%2FY0RljlWArcUyZyNdo8D5O3Ea4xH2oi0VNzOq7SkpzXQCEdy306HPcEYsZEp3HU%2FIbNvt28lt5I1C7LBFKx3kizjMBmH4dKJ22GCppmcKjhMdWHWZoO9QheZteCcjv6iMuUhUvZ4fBS0su%2FGpZp6pzlh4%2BZEUZMriNH96XV1mVcgdioYps7RPbc5opVF2LrmjNqYNrrGPs%2FdDCE%3D&amp;Expires=1727806738"
+ alt="Alvin Siu">
+                <h3>1. How many hats can Alvin wear before it becomes a safety hazard in the office?</h3>
                 <div class="options">
-                    <label><input type="radio" name="q1" value="10" required> 10%</label>
-                    <label><input type="radio" name="q1" value="50"> 50%</label>
-                    <label><input type="radio" name="q1" value="100"> 100% - Alvin demands it!</label>
+                    <label><input type="radio" name="q1" value="1" required> 1 - Safety first!</label>
+                    <label><input type="radio" name="q1" value="3"> 3 - More hats, more fun!</label>
+                    <label><input type="radio" name="q1" value="5"> 5 - The more, the merrier!</label>
                 </div>
             </div>
 
+            <!-- Question 2 -->
             <div class="question">
-                <h3>2. Has Conor considered using his sales skills to sell the concept of not asking for more scope changes to our clients?</h3>
+                <h3>2. How many weeks of vacation should we get each year?</h3>
                 <div class="options">
-                    <label><input type="radio" name="q2" value="yes" required> Yes, and it’s about time!</label>
-                    <label><input type="radio" name="q2" value="no"> No, scope creep is a lifestyle.</label>
+                    <label><input type="radio" name="q2" value="0" required> 0 (Vacation is for the weak.)</label>
+                    <label><input type="radio" name="q2" value="7"> 7 (Just enough to remember we work here.)</label>
+                    <label><input type="radio" name="q2" value="20"> 20 (Isn't that European standard?)</label>
+                    <label><input type="radio" name="q2" value="52"> 52 (We’ll just work “remotely” from the beach.)</label>
                 </div>
             </div>
 
+            <!-- Question 3 -->
             <div class="question">
-                <h3>3. How many bugs does Sean need to eliminate before we officially name a programming technique after him?</h3>
+                <img                   src="https://zagaran-website.s3.amazonaws.com/employee-photos/profile-conor-hobert.jpg?AWSAccessKeyId=ASIAXRPW5PDG2KZLF73F&amp;Signature=hw87EFmQEcK9aK3nalWSfNIU10A%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEEcaCXVzLWVhc3QtMSJHMEUCIQCZEHbvybz2Voq7zL1q028oBdYDZejQUXuK%2F6MxKIkSkgIgDKTeJMmRALuHR4D4rugoJfphUJk23T1pQ%2FiNBy0DIrcquwUIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw1MTg1OTgyNjA5NDEiDJfKa1kJSlFB4%2FLfQiqPBZm%2Bc4Y7zFyigj3FE5Gq49DaT%2BIpf9YP8TvfqIdExkdVhbq1kLuJNXbWPTRYFetuGJneCmDCdrPoAlCgvollmbpJnT%2FC98aGG857EO5X7bor3hfT%2FxOHTtGbVuIok3dI3BhCEcHRu11VLnFq%2FUW%2F0lasfh90vtDzFE2NexWjJU5SKShIn4z2dYSGmG7%2FWEFRLWlUgWhTV%2BDWO%2FlrBfsPfSCYkA8taoye8ovHSNGZ3oQr1XkOylD2OI3IyvoV3Mxdkd8g3dmsi2vEvKOYTRonmBXCB2ZWh2Y%2B3e7P2yLB42X60TpPREX%2BYgP1PQJHOt%2FF%2Bw%2BZU0L0YQhb7atX5Bv2Zs1qHKDC6LLXNd7b96DVFKBKJomrhvGoUqr%2FWgB1KlbdevM0DMl%2B1R1Ca1iSjTakf1c4rE4j7EAd75PGTW0L7p5%2FJTAkeKQg6Xig3EV5w3%2Fk8dLKHIHEifu7xYfGtCZMTGASypwZ8t0PDUu8GDlIoIYZOP65F5mqvWVZ%2BVfJfmnK2tSLDKyTbF0C79aofRH5kvK1ku2HCE%2Bhuzd2ixG%2FE9SwdDTykUPNalBGsDH0hHfpimxFCMh4MDdFhY7g2%2B%2FB9TkNS1f7DYdsTxzp9By1Ab6FtxejYXqoeDSd7sJ8LyM1bhFlSBwXEwFtXKhXuHfeNSAuMSD9lHe%2FiuhqycxDslRcnw1Zy%2BRme1aarV8rR7AS5CgNN09lX1KHCDMAAGDuiWmHCd8NEgWWv%2B76ozQAOEZiELfTEd3VL6nXypnTfmTmwh4P464BFLI8I5OjcS9dkF1oRp10vtVh90%2FqiYRyiJ2VfnMS9VD5gne1noiO5%2BE%2FKO%2F4XITjK1KpaLHGI8K0leU1y%2FePU4BF78mMbG8hsnownoXwtwY6sQEJAqNFpO%2BsB3GQrNlIUftV1DApFlzf%2FY0RljlWArcUyZyNdo8D5O3Ea4xH2oi0VNzOq7SkpzXQCEdy306HPcEYsZEp3HU%2FIbNvt28lt5I1C7LBFKx3kizjMBmH4dKJ22GCppmcKjhMdWHWZoO9QheZteCcjv6iMuUhUvZ4fBS0su%2FGpZp6pzlh4%2BZEUZMriNH96XV1mVcgdioYps7RPbc5opVF2LrmjNqYNrrGPs%2FdDCE%3D&amp;Expires=1727806722"
+ alt="Conor">
+                <h3>3. Has Conor considered using his sales skills to sell the concept of <em>not</em> asking for more scope changes to our clients?</h3>
                 <div class="options">
-                    <label><input type="radio" name="q3" value="100" required> 100 bugs</label>
-                    <label><input type="radio" name="q3" value="1000"> 1000 bugs (a real milestone!)</label>
-                    <label><input type="radio" name="q3" value="infinite"> Infinite - bugs are eternal.</label>
+                    <label><input type="radio" name="q3" value="yes" required> Yes, and it’s about time!</label>
+                    <label><input type="radio" name="q3" value="no"> No, scope creep is a lifestyle.</label>
                 </div>
             </div>
 
+            <!-- Question 4 -->
             <div class="question">
-                <h3>4. Is Grace baking more treats in the office an official part of the React Native build process, or just a morale booster?</h3>
+                <img                   src="https://zagaran-website.s3.amazonaws.com/employee-photos/profile-noah-houghton.jpg?AWSAccessKeyId=ASIAXRPW5PDG2KZLF73F&amp;Signature=p9JIcU09pA3sC2G4KmklBavMoqY%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEEcaCXVzLWVhc3QtMSJHMEUCIQCZEHbvybz2Voq7zL1q028oBdYDZejQUXuK%2F6MxKIkSkgIgDKTeJMmRALuHR4D4rugoJfphUJk23T1pQ%2FiNBy0DIrcquwUIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw1MTg1OTgyNjA5NDEiDJfKa1kJSlFB4%2FLfQiqPBZm%2Bc4Y7zFyigj3FE5Gq49DaT%2BIpf9YP8TvfqIdExkdVhbq1kLuJNXbWPTRYFetuGJneCmDCdrPoAlCgvollmbpJnT%2FC98aGG857EO5X7bor3hfT%2FxOHTtGbVuIok3dI3BhCEcHRu11VLnFq%2FUW%2F0lasfh90vtDzFE2NexWjJU5SKShIn4z2dYSGmG7%2FWEFRLWlUgWhTV%2BDWO%2FlrBfsPfSCYkA8taoye8ovHSNGZ3oQr1XkOylD2OI3IyvoV3Mxdkd8g3dmsi2vEvKOYTRonmBXCB2ZWh2Y%2B3e7P2yLB42X60TpPREX%2BYgP1PQJHOt%2FF%2Bw%2BZU0L0YQhb7atX5Bv2Zs1qHKDC6LLXNd7b96DVFKBKJomrhvGoUqr%2FWgB1KlbdevM0DMl%2B1R1Ca1iSjTakf1c4rE4j7EAd75PGTW0L7p5%2FJTAkeKQg6Xig3EV5w3%2Fk8dLKHIHEifu7xYfGtCZMTGASypwZ8t0PDUu8GDlIoIYZOP65F5mqvWVZ%2BVfJfmnK2tSLDKyTbF0C79aofRH5kvK1ku2HCE%2Bhuzd2ixG%2FE9SwdDTykUPNalBGsDH0hHfpimxFCMh4MDdFhY7g2%2B%2FB9TkNS1f7DYdsTxzp9By1Ab6FtxejYXqoeDSd7sJ8LyM1bhFlSBwXEwFtXKhXuHfeNSAuMSD9lHe%2FiuhqycxDslRcnw1Zy%2BRme1aarV8rR7AS5CgNN09lX1KHCDMAAGDuiWmHCd8NEgWWv%2B76ozQAOEZiELfTEd3VL6nXypnTfmTmwh4P464BFLI8I5OjcS9dkF1oRp10vtVh90%2FqiYRyiJ2VfnMS9VD5gne1noiO5%2BE%2FKO%2F4XITjK1KpaLHGI8K0leU1y%2FePU4BF78mMbG8hsnownoXwtwY6sQEJAqNFpO%2BsB3GQrNlIUftV1DApFlzf%2FY0RljlWArcUyZyNdo8D5O3Ea4xH2oi0VNzOq7SkpzXQCEdy306HPcEYsZEp3HU%2FIbNvt28lt5I1C7LBFKx3kizjMBmH4dKJ22GCppmcKjhMdWHWZoO9QheZteCcjv6iMuUhUvZ4fBS0su%2FGpZp6pzlh4%2BZEUZMriNH96XV1mVcgdioYps7RPbc5opVF2LrmjNqYNrrGPs%2FdDCE%3D&amp;Expires=1727806722"
+ alt="Noah">
+                <h3>4. How much code does Noah need to write before we’re allowed to ask him about Viking women warriors in every meeting?</h3>
                 <div class="options">
-                    <label><input type="radio" name="q4" value="official" required> It’s official - treat-driven development!</label>
-                    <label><input type="radio" name="q4" value="morale"> Purely morale-boosting (but still critical).</label>
+                    <label><input type="radio" name="q4" value="10000" required> 10,000 lines</label>
+                    <label><input type="radio" name="q4" value="100000"> 100,000 lines (and a mini-lecture on history)</label>
+                    <label><input type="radio" name="q4" value="infinite"> Infinite - the legend will grow.</label>
                 </div>
             </div>
 
+            <!-- Question 5 -->
             <div class="question">
-                <h3>5. Can we convince Daniel to develop a machine learning algorithm that predicts the exact time someone will ask, “Can we just add one more feature?”</h3>
+                                <img                                     src="https://zagaran-website.s3.amazonaws.com/internal/employees/photos/Grace_Whitney_Y-m-d_0eab3f38-611c-4b46-af74-c29e24165591_UYM1A6S.pdf?AWSAccessKeyId=ASIAXRPW5PDG2KZLF73F&amp;Signature=GjMiY0i5jVNIAY2MDZClnwKOQ90%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEEcaCXVzLWVhc3QtMSJHMEUCIQCZEHbvybz2Voq7zL1q028oBdYDZejQUXuK%2F6MxKIkSkgIgDKTeJMmRALuHR4D4rugoJfphUJk23T1pQ%2FiNBy0DIrcquwUIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw1MTg1OTgyNjA5NDEiDJfKa1kJSlFB4%2FLfQiqPBZm%2Bc4Y7zFyigj3FE5Gq49DaT%2BIpf9YP8TvfqIdExkdVhbq1kLuJNXbWPTRYFetuGJneCmDCdrPoAlCgvollmbpJnT%2FC98aGG857EO5X7bor3hfT%2FxOHTtGbVuIok3dI3BhCEcHRu11VLnFq%2FUW%2F0lasfh90vtDzFE2NexWjJU5SKShIn4z2dYSGmG7%2FWEFRLWlUgWhTV%2BDWO%2FlrBfsPfSCYkA8taoye8ovHSNGZ3oQr1XkOylD2OI3IyvoV3Mxdkd8g3dmsi2vEvKOYTRonmBXCB2ZWh2Y%2B3e7P2yLB42X60TpPREX%2BYgP1PQJHOt%2FF%2Bw%2BZU0L0YQhb7atX5Bv2Zs1qHKDC6LLXNd7b96DVFKBKJomrhvGoUqr%2FWgB1KlbdevM0DMl%2B1R1Ca1iSjTakf1c4rE4j7EAd75PGTW0L7p5%2FJTAkeKQg6Xig3EV5w3%2Fk8dLKHIHEifu7xYfGtCZMTGASypwZ8t0PDUu8GDlIoIYZOP65F5mqvWVZ%2BVfJfmnK2tSLDKyTbF0C79aofRH5kvK1ku2HCE%2Bhuzd2ixG%2FE9SwdDTykUPNalBGsDH0hHfpimxFCMh4MDdFhY7g2%2B%2FB9TkNS1f7DYdsTxzp9By1Ab6FtxejYXqoeDSd7sJ8LyM1bhFlSBwXEwFtXKhXuHfeNSAuMSD9lHe%2FiuhqycxDslRcnw1Zy%2BRme1aarV8rR7AS5CgNN09lX1KHCDMAAGDuiWmHCd8NEgWWv%2B76ozQAOEZiELfTEd3VL6nXypnTfmTmwh4P464BFLI8I5OjcS9dkF1oRp10vtVh90%2FqiYRyiJ2VfnMS9VD5gne1noiO5%2BE%2FKO%2F4XITjK1KpaLHGI8K0leU1y%2FePU4BF78mMbG8hsnownoXwtwY6sQEJAqNFpO%2BsB3GQrNlIUftV1DApFlzf%2FY0RljlWArcUyZyNdo8D5O3Ea4xH2oi0VNzOq7SkpzXQCEdy306HPcEYsZEp3HU%2FIbNvt28lt5I1C7LBFKx3kizjMBmH4dKJ22GCppmcKjhMdWHWZoO9QheZteCcjv6iMuUhUvZ4fBS0su%2FGpZp6pzlh4%2BZEUZMriNH96XV1mVcgdioYps7RPbc5opVF2LrmjNqYNrrGPs%2FdDCE%3D&amp;Expires=1727806722"
+ alt="Grace">
+
+                <h3>5. Should our tea time on Thursdays focus on discussing bugs, or just trying to pronounce “oolong” correctly?</h3>
                 <div class="options">
-                    <label><input type="radio" name="q5" value="yes" required> Yes, and it will change everything!</label>
-                    <label><input type="radio" name="q5" value="no"> No, let’s keep living in chaos.</label>
+                    <label><input type="radio" name="q5" value="bugs" required> Discussing bugs - debugging over tea!</label>
+                    <label><input type="radio" name="q5" value="oolong"> Pronouncing “oolong” correctly - tea etiquette!</label>
                 </div>
             </div>
 
+            <!-- Question 6 -->
             <div class="question">
-                <h3>6. How much code does Noah need to write before we’re allowed to ask him about Viking women warriors in every meeting?</h3>
+                <img                   src="https://zagaran-website.s3.amazonaws.com/internal/employees/photos/Duncan_Sorenson_Y-m-d_befdaeeb-662f-4f78-96ae-d3b70dac51b1_So7zrwx.pdf?AWSAccessKeyId=ASIAXRPW5PDG2KZLF73F&amp;Signature=iagLdakuwQRDyTVL25YF8w2%2B%2BhQ%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEEcaCXVzLWVhc3QtMSJHMEUCIQCZEHbvybz2Voq7zL1q028oBdYDZejQUXuK%2F6MxKIkSkgIgDKTeJMmRALuHR4D4rugoJfphUJk23T1pQ%2FiNBy0DIrcquwUIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw1MTg1OTgyNjA5NDEiDJfKa1kJSlFB4%2FLfQiqPBZm%2Bc4Y7zFyigj3FE5Gq49DaT%2BIpf9YP8TvfqIdExkdVhbq1kLuJNXbWPTRYFetuGJneCmDCdrPoAlCgvollmbpJnT%2FC98aGG857EO5X7bor3hfT%2FxOHTtGbVuIok3dI3BhCEcHRu11VLnFq%2FUW%2F0lasfh90vtDzFE2NexWjJU5SKShIn4z2dYSGmG7%2FWEFRLWlUgWhTV%2BDWO%2FlrBfsPfSCYkA8taoye8ovHSNGZ3oQr1XkOylD2OI3IyvoV3Mxdkd8g3dmsi2vEvKOYTRonmBXCB2ZWh2Y%2B3e7P2yLB42X60TpPREX%2BYgP1PQJHOt%2FF%2Bw%2BZU0L0YQhb7atX5Bv2Zs1qHKDC6LLXNd7b96DVFKBKJomrhvGoUqr%2FWgB1KlbdevM0DMl%2B1R1Ca1iSjTakf1c4rE4j7EAd75PGTW0L7p5%2FJTAkeKQg6Xig3EV5w3%2Fk8dLKHIHEifu7xYfGtCZMTGASypwZ8t0PDUu8GDlIoIYZOP65F5mqvWVZ%2BVfJfmnK2tSLDKyTbF0C79aofRH5kvK1ku2HCE%2Bhuzd2ixG%2FE9SwdDTykUPNalBGsDH0hHfpimxFCMh4MDdFhY7g2%2B%2FB9TkNS1f7DYdsTxzp9By1Ab6FtxejYXqoeDSd7sJ8LyM1bhFlSBwXEwFtXKhXuHfeNSAuMSD9lHe%2FiuhqycxDslRcnw1Zy%2BRme1aarV8rR7AS5CgNN09lX1KHCDMAAGDuiWmHCd8NEgWWv%2B76ozQAOEZiELfTEd3VL6nXypnTfmTmwh4P464BFLI8I5OjcS9dkF1oRp10vtVh90%2FqiYRyiJ2VfnMS9VD5gne1noiO5%2BE%2FKO%2F4XITjK1KpaLHGI8K0leU1y%2FePU4BF78mMbG8hsnownoXwtwY6sQEJAqNFpO%2BsB3GQrNlIUftV1DApFlzf%2FY0RljlWArcUyZyNdo8D5O3Ea4xH2oi0VNzOq7SkpzXQCEdy306HPcEYsZEp3HU%2FIbNvt28lt5I1C7LBFKx3kizjMBmH4dKJ22GCppmcKjhMdWHWZoO9QheZteCcjv6iMuUhUvZ4fBS0su%2FGpZp6pzlh4%2BZEUZMriNH96XV1mVcgdioYps7RPbc5opVF2LrmjNqYNrrGPs%2FdDCE%3D&amp;Expires=1727806722"
+ alt="Noah">
+                <h3>6. How many Klask victories does it take before someone can veto a pull request?</h3>
                 <div class="options">
-                    <label><input type="radio" name="q6" value="10000" required> 10,000 lines</label>
-                    <label><input type="radio" name="q6" value="100000"> 100,000 lines (and a mini-lecture on history)</label>
-                    <label><input type="radio" name="q6" value="infinite"> Infinite - the legend will grow.</label>
+                    <label><input type="radio" name="q6" value="1" required> 1 (Ultimate authority is won, not given.)</label>
+                    <label><input type="radio" name="q6" value="5"> 5 (We need proof you can beat both code <em>and</em> coworkers.)</label>
+                    <label><input type="radio" name="q6" value="10"> 10 (By that point, you’ve earned the right to merge anything—even bad puns.)</label>
                 </div>
             </div>
 
