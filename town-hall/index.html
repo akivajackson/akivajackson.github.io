@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zagaran Town Hall Satirical Referendum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h3 {
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Thank You Modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 500px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .close-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Zagaran Town Hall Referendum 2024</h1>
+    </header>
+
+    <div class="container">
+        <h2>We Value Your Opinion!</h2>
+        <p>Please participate in our referendum by answering the following important questions:</p>
+        <form id="referendum-form">
+            <div class="question">
+                <h3>1. By what percentage should we increase our Nerf gun arsenal to ensure Alvin can defend his title as the “wearer of many hats”?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="10" required> 10%</label>
+                    <label><input type="radio" name="q1" value="50"> 50%</label>
+                    <label><input type="radio" name="q1" value="100"> 100% - Alvin demands it!</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. Has Conor considered using his sales skills to sell the concept of not asking for more scope changes to our clients?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="yes" required> Yes, and it’s about time!</label>
+                    <label><input type="radio" name="q2" value="no"> No, scope creep is a lifestyle.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>3. How many bugs does Sean need to eliminate before we officially name a programming technique after him?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="100" required> 100 bugs</label>
+                    <label><input type="radio" name="q3" value="1000"> 1000 bugs (a real milestone!)</label>
+                    <label><input type="radio" name="q3" value="infinite"> Infinite - bugs are eternal.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>4. Is Grace baking more treats in the office an official part of the React Native build process, or just a morale booster?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="official" required> It’s official - treat-driven development!</label>
+                    <label><input type="radio" name="q4" value="morale"> Purely morale-boosting (but still critical).</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>5. Can we convince Daniel to develop a machine learning algorithm that predicts the exact time someone will ask, “Can we just add one more feature?”</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="yes" required> Yes, and it will change everything!</label>
+                    <label><input type="radio" name="q5" value="no"> No, let’s keep living in chaos.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>6. How much code does Noah need to write before we’re allowed to ask him about Viking women warriors in every meeting?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="10000" required> 10,000 lines</label>
+                    <label><input type="radio" name="q6" value="100000"> 100,000 lines (and a mini-lecture on history)</label>
+                    <label><input type="radio" name="q6" value="infinite"> Infinite - the legend will grow.</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Your Votes</button>
+        </form>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You for Participating!</h2>
+            <p>Your votes have been recorded in the annals of Zagaran history.</p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('referendum-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual form submission
+            // Show a thank you modal
+            document.getElementById('thankYouModal').style.display = 'block';
+        });
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('thankYouModal').style.display = 'none';
+            document.getElementById('referendum-form').reset();
+        }
+
+        // Close modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            var modal = document.getElementById('thankYouModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                document.getElementById('referendum-form').reset();
+            }
+        }
+    </script>
+
+</body>
+</html>
