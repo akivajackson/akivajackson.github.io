@@ -30,6 +30,11 @@ nav {
                 flex-wrap: wrap;
             }
 
+            p {
+                height: max-content;
+                margin: auto;
+            }
+
             img {
                 height: 50px;
                 margin: 10px 0;
@@ -48,7 +53,9 @@ nav {
 
     #navigation-buttons {
         flex-direction: row-reverse;
-        align-content: flex-start;
+        @media (max-width: 675px) {
+            align-content: flex-start;
+        }
 
         li {
             padding: 5px 9px;
