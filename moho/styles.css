@@ -23,6 +23,19 @@ nav {
 
     .header {
         width: fit-content;
+
+        li {
+            display: flex;
+            @media (max-width: 480px) {
+                flex-wrap: wrap;
+            }
+
+            img {
+                height: 50px;
+                margin: 10px 0;
+            }
+        }
+
     }
 }
 
@@ -33,8 +46,13 @@ nav {
         }
     }
 
-    #navigation-buttons li {
-        padding: 5px 9px;
+    #navigation-buttons {
+        flex-direction: row-reverse;
+        align-content: flex-start;
+
+        li {
+            padding: 5px 9px;
+        }
     }
 }
 
@@ -50,6 +68,10 @@ nav ul {
 main.container {
     top: 67px;
     position: relative;
+
+    @media (max-width: 768px) {
+        top: 120px;
+    }
 }
 
 hr {
