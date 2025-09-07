@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Akiva on Akiva Jackson</title><link>https://akivajackson.com/author/akiva/</link><description>Recent content in Akiva on Akiva Jackson</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 29 May 2024 18:17:43 -0400</lastBuildDate><atom:link href="https://akivajackson.com/author/akiva/index.xml" rel="self" type="application/rss+xml"/><item><title>The Moishe House Somerville Yiddish Song Book</title><link>https://akivajackson.com/blog/yiddish-song-book/</link><pubDate>Wed, 29 May 2024 18:17:43 -0400</pubDate><guid>https://akivajackson.com/blog/yiddish-song-book/</guid><description>&lt;p>I made this little songbook for my Moishe House with the help of my dear friend &lt;a href="https://www.adahhetko.net/">Adah Hetko&lt;/a>.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Akiva on Akiva Jackson</title><link>https://akivajackson.com/author/akiva/</link><description>Recent content in Akiva on Akiva Jackson</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 29 May 2024 18:17:43 -0400</lastBuildDate><atom:link href="https://akivajackson.com/author/akiva/index.xml" rel="self" type="application/rss+xml"/><item><title>The Moishe House Somerville Yiddish Song Book</title><link>https://akivajackson.com/blog/yiddish-song-book/</link><pubDate>Wed, 29 May 2024 18:17:43 -0400</pubDate><guid>https://akivajackson.com/blog/yiddish-song-book/</guid><description>&lt;p&gt;I made this little songbook for my Moishe House with the help of my dear friend &lt;a href="https://www.adahhetko.net/"&gt;Adah Hetko&lt;/a&gt;.
 
-&lt;script src= '/js/pdf-js/build/pdf.js'>&lt;/script>
-&lt;style>
+&lt;script src= '/js/pdf-js/build/pdf.js'&gt;&lt;/script&gt;
+&lt;style&gt;
 #the-canvas {
  border: 1px solid black;
  direction: ltr;
@@ -41,22 +41,22 @@
 @-webkit-keyframes spin {
  to { -webkit-transform: rotate(360deg); }
 }
-&lt;/style>
+&lt;/style&gt;
 
-&lt;div id="paginator">
- &lt;button id="prev">Previous&lt;/button>
- &lt;button id="next">Next&lt;/button>
+&lt;div id="paginator"&gt;
+ &lt;button id="prev"&gt;Previous&lt;/button&gt;
+ &lt;button id="next"&gt;Next&lt;/button&gt;
  &amp;nbsp; &amp;nbsp;
- &lt;span>Page: &lt;span id="page_num">&lt;/span> / &lt;span id="page_count">&lt;/span>&lt;/span>
-&lt;/div>
-&lt;div id="embed-pdf-container">
- &lt;div id="loadingWrapper">
- &lt;div id="loading">&lt;/div>
- &lt;/div>
- &lt;canvas id="the-canvas">&lt;/canvas>
-&lt;/div>
+ &lt;span&gt;Page: &lt;span id="page_num"&gt;&lt;/span&gt; / &lt;span id="page_count"&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div id="embed-pdf-container"&gt;
+ &lt;div id="loadingWrapper"&gt;
+ &lt;div id="loading"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;canvas id="the-canvas"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
 
-&lt;script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 window.onload = function() {
 
 
@@ -169,7 +169,7 @@ document.getElementById('prev').addEventListener('click', onPrevPage);
 
 
 function onNextPage() {
- if (pageNum >= pdfDoc.numPages) {
+ if (pageNum &gt;= pdfDoc.numPages) {
  return;
  }
  pageNum++;
@@ -185,7 +185,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
  document.getElementById('page_count').textContent = numPages;
  
  
- if(pageNum > numPages) {
+ if(pageNum &gt; numPages) {
  pageNum = numPages
  }
 
@@ -194,17 +194,17 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 });
 }
 
-&lt;/script>
- &lt;!-- path starts in static -->&lt;/p></description></item><item><title>Wisdom Teeth: Chuck 'Em?</title><link>https://akivajackson.com/blog/wisdom/</link><pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/wisdom/</guid><description>&lt;p>I&amp;rsquo;m getting my wisdom teeth out this week. My hygienist and two oral surgeons recommended extraction, but you know what? Did I trust them? Well, sorta.&lt;/p></description></item><item><title>My Mother's Challah Recipe</title><link>https://akivajackson.com/blog/challah/</link><pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/challah/</guid><description>&lt;!-- ![](/images/challah.jpg) -->
-&lt;p>The best challah you&amp;rsquo;ll ever taste.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
-&lt;h3 id="challah-3-loaves">Challah (3 loaves)&lt;/h3>
-&lt;p>&lt;strong>Ingredients&lt;/strong> &lt;br>&lt;br>
-1 Tbs yeast&lt;br>
-1.5 C warm water&lt;br>
-3 eggs&lt;br>
-~5-6 cups flour (you can do all white, half-half, or 1/4 whole wheat)&lt;br>
-1 TBs salt&lt;br>
-1/3 C oil&lt;br>
-1/2 C sugar &lt;br>&lt;br>&lt;/p></description></item><item><title>My Bachelor Thesis: Contradiction &amp; Dichotomy</title><link>https://akivajackson.com/blog/thesis/</link><pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/thesis/</guid><description>&lt;h3 id="my-bachelor-thesis">My Bachelor Thesis&lt;/h3>
-&lt;p>The results of my toils in college: &lt;em>Contradiction &amp;amp; Dichotomy: David Bergelson and Itzik Manger Confront the Bible&lt;/em>, an eighty-six page exploration of the badass poetry of Itzik Manger and a fascinating story by David Bergelson.&lt;/p></description></item><item><title>Warring over Yiddish Poetry: Retranslating Morris Rosenfeld as a Political Zionist</title><link>https://akivajackson.com/blog/jp2/</link><pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp2/</guid><description>&lt;p>My second independent project in college: analyzing how the German translation of Morris Rosenfeld&amp;rsquo;s Yiddish sweatshop poetry changd it from a messianic work into political zionist poems.&lt;/p></description></item><item><title>Blossoms from the Dust: A model for salvation</title><link>https://akivajackson.com/blog/jp1/</link><pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp1/</guid><description>&lt;h3 id="blossoms-from-the-dust-a-model-for-salvation">Blossoms from the Dust: A model for salvation&lt;/h3>
-&lt;p>A close reading of Rainer Maria Rilke&amp;rsquo;s poem &lt;em>Dich wundert nicht des Sturmes Wucht&lt;/em> (You are not surprised at the force of the storm).&lt;/p></description></item></channel></rss>
+&lt;/script&gt;
+ &lt;!-- path starts in static --&gt;&lt;/p&gt;</description></item><item><title>Wisdom Teeth: Chuck 'Em?</title><link>https://akivajackson.com/blog/wisdom/</link><pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/wisdom/</guid><description>&lt;p&gt;I&amp;rsquo;m getting my wisdom teeth out this week. My hygienist and two oral surgeons recommended extraction, but you know what? Did I trust them? Well, sorta.&lt;/p&gt;</description></item><item><title>My Mother's Challah Recipe</title><link>https://akivajackson.com/blog/challah/</link><pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/challah/</guid><description>&lt;!-- ![](/images/challah.jpg) --&gt;
+&lt;p&gt;The best challah you&amp;rsquo;ll ever taste.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id="challah-3-loaves"&gt;Challah (3 loaves)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Ingredients&lt;/strong&gt; &lt;br&gt;&lt;br&gt;
+1 Tbs yeast&lt;br&gt;
+1.5 C warm water&lt;br&gt;
+3 eggs&lt;br&gt;
+~5-6 cups flour (you can do all white, half-half, or 1/4 whole wheat)&lt;br&gt;
+1 TBs salt&lt;br&gt;
+1/3 C oil&lt;br&gt;
+1/2 C sugar &lt;br&gt;&lt;br&gt;&lt;/p&gt;</description></item><item><title>My Bachelor Thesis: Contradiction &amp; Dichotomy</title><link>https://akivajackson.com/blog/thesis/</link><pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/thesis/</guid><description>&lt;h3 id="my-bachelor-thesis"&gt;My Bachelor Thesis&lt;/h3&gt;
+&lt;p&gt;The results of my toils in college: &lt;em&gt;Contradiction &amp;amp; Dichotomy: David Bergelson and Itzik Manger Confront the Bible&lt;/em&gt;, an eighty-six page exploration of the badass poetry of Itzik Manger and a fascinating story by David Bergelson.&lt;/p&gt;</description></item><item><title>Warring over Yiddish Poetry: Retranslating Morris Rosenfeld as a Political Zionist</title><link>https://akivajackson.com/blog/jp2/</link><pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp2/</guid><description>&lt;p&gt;My second independent project in college: analyzing how the German translation of Morris Rosenfeld&amp;rsquo;s Yiddish sweatshop poetry changd it from a messianic work into political zionist poems.&lt;/p&gt;</description></item><item><title>Blossoms from the Dust: A model for salvation</title><link>https://akivajackson.com/blog/jp1/</link><pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><guid>https://akivajackson.com/blog/jp1/</guid><description>&lt;h3 id="blossoms-from-the-dust-a-model-for-salvation"&gt;Blossoms from the Dust: A model for salvation&lt;/h3&gt;
+&lt;p&gt;A close reading of Rainer Maria Rilke&amp;rsquo;s poem &lt;em&gt;Dich wundert nicht des Sturmes Wucht&lt;/em&gt; (You are not surprised at the force of the storm).&lt;/p&gt;</description></item></channel></rss>
