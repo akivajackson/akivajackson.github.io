@@ -1,0 +1,205 @@
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 0;
+    background-color: #fdf6e3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('images/sides.png');
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto; /* or use cover for full coverage */
+
+
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8d94e;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0.5rem 0;
+    font-family: 'Comic Sans MS', 'Patrick Hand', cursive;
+}
+
+.signup-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', 'Patrick Hand', cursive;
+}
+
+.signup-btn:hover {
+    background-color: #d62828;
+}
+
+.fc {
+    --fc-button-bg-color: black;
+    --bs-link-color-rgb: white;
+    --fc-button-hover-border-color: black;
+
+    --fc-small-font-size: .85em;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+    --fc-neutral-text-color: #808080;
+    --fc-border-color: black;
+
+    --fc-button-text-color: #fff;
+    --fc-button-bg-color: #2C3E50;
+    --fc-button-border-color: black;
+    --fc-button-hover-bg-color: #1e2b37;
+    --fc-button-hover-border-color: black;
+    --fc-button-active-bg-color: #1a252f;
+    --fc-button-active-border-color: black;
+
+    --fc-event-bg-color: #3788d8;
+    --fc-event-border-color: black;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+
+    --fc-non-business-color: rgba(215, 215, 215, 0.3);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+    --fc-now-indicator-color: red;
+
+
+    /* FullCalendar grid: black background, thick black borders */
+
+    .fc-daygrid-day, .fc-daygrid-day-frame {
+        /*background: #111;*/
+        border: 3px solid black;
+    }
+
+    table.fc-scrollgrid {
+        /*border: none !important;*/
+        border-right-width: -1px;
+    }
+
+    .fc-daygrid-day-number {
+        color: black;
+        /*    not underlined*/
+        text-decoration: none;
+    }
+
+    /* Header title: white */
+
+    .fc-toolbar-title {
+        color: white;
+        font-family: "Caveat Brush", cursive;
+        font-size: 4rem;
+    }
+
+    /* Custom buttons: white arrows, black background */
+
+    .fc-button, .fc-button-primary {
+        background: black;
+        color: white;
+        margin: 0 20px;
+
+        &:hover {
+            background: black;
+            border-color: white;
+        }
+    }
+
+
+    /* Calendar header: black background */
+
+    .fc-toolbar.fc-header-toolbar {
+        background: black;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .fc-col-header-cell {
+        /* day of week names */
+        color: white;
+        font-family: "Caveat Brush", cursive;
+
+        a {
+            text-decoration: none;
+        }
+
+        background: black;
+    }
+}
+
+
+#header-image {
+    width: 70%;
+    margin-top: 60px;
+}
+
+#bottom-image {
+    width: 70%;
+    margin-top: -80px;
+
+    @media (max-width: 1000px) {
+        margin-top: -50px;
+    }
+}
+
+#calendar-container {
+    position: relative;
+    width: 100%;
+
+    #calendar, #sides-image {
+    }
+
+    .signup-btn {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #calendar {
+        /*max-width: 1200px;*/
+        margin: 1rem auto;
+        z-index: 1;
+        position: relative;
+        /*top: 240px;*/
+        width: 57%;
+    }
+
+}
+
+
+#sides-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /*margin-top: -320px;*/
+}
+
+#background-image {
+    position: absolute;
+    z-index: -1;
+    /*top: 0;*/
+    /*left: 0;*/
+    max-width: 1200px;
+    margin: auto;
+    /*height: 100%;*/
+    /*background-image: url('https://example.com/fun-background.jpg');*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*opacity: 0.1;*/
+    /*z-index: -1;*/
+}
+
