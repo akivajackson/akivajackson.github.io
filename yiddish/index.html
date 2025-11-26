@@ -76,10 +76,16 @@
 
 </template>
 
+<div id="debug-box">
+  <strong>Debug</strong><br>
+  <label><input type="checkbox" id="testData"> Akiva's extra test data</label><br>
+  <label><input type="checkbox" id="publishedOnly"> Published events only</label>
+</div>
 
 <script>
+  let calendar;
   document.addEventListener('DOMContentLoaded', function () {
-    const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+    calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
       themeSystem: 'bootstrap5',
       height: 'auto',
       events: getEvents, // function to fetch events from Google Sheets
@@ -148,10 +154,22 @@
   };
 
   // Pull event data from Google Sheets CSV export
+  let useTestData = document.getElementById('testData').checked;
+  let publishedOnly = document.getElementById('publishedOnly').checked;
+  document.getElementById('testData').addEventListener('change', function (e) {
+    useTestData = e.target.checked;
+    calendar.refetchEvents();
+  });
+  document.getElementById('publishedOnly').addEventListener('change', function (e) {
+    publishedOnly = e.target.checked;
+    calendar.refetchEvents();
+  });
+
+  // Update getEvents to use these flags
   function getEvents(info, successCallback, failureCallback) {
-    let sheet = "https://docs.google.com/spreadsheets/d/12t8KGJtAxdoStRRCUGXPvZDbJGuxJ9j1j02irCR5isI";
-    const testSheet = "https://docs.google.com/spreadsheets/d/18uQTvIdS0VDxrJfadJIgpAatkoDRcs53_ZYdjzWRuBA"
-    const link = testSheet
+    const realSheet = "https://docs.google.com/spreadsheets/d/12t8KGJtAxdoStRRCUGXPvZDbJGuxJ9j1j02irCR5isI";
+    const testSheet = "https://docs.google.com/spreadsheets/d/18uQTvIdS0VDxrJfadJIgpAatkoDRcs53_ZYdjzWRuBA";
+    const link = useTestData ? testSheet : realSheet;
     fetch(`${link}/export?format=csv`)
       .then(response => response.text())
       .then(csv => {
@@ -162,8 +180,10 @@
           header: true,
           skipEmptyLines: true,
           complete: function (results) {
-            const events = results.data.map(ev => mapRowToEvent(ev));
-            console.log("events", events);
+            let events = results.data.map(ev => mapRowToEvent(ev));
+            if (publishedOnly) {
+              events = events.filter(ev => ev.extendedProps.published);
+            }
             successCallback(events);
           }
         });
