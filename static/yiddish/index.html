@@ -13,91 +13,225 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"
+          integrity="sha256-1/0GA1EkYejtvYFoa+rSq4LfM4m5zKI13Z1bQIhI4Co=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"
+          integrity="sha256-NVP7i99bgATOVTHmgn6ByLNOezmSZ3lndUVEBk6XsBY=" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!--  <header>-->
-<!--    <h1>Yiddish & Klezmer in Boston</h1>-->
-<!--    <button class="signup-btn" onclick="alert('Signup form coming soon!')">✉️ Sign Up</button>-->
-<!--  </header>-->
 
 <img src="images/header.png" alt="" id="header-image">
-<!--  <img src="images/sides.png" id="sides-image" alt="">-->
+<div id="left-side-flowers" class="side-flowers"></div>
+<div id="right-side-flowers" class="side-flowers"></div>
 <div id="calendar-container">
-  <!--  sign up button-->
   <button class="signup-btn" onclick="alert('Signup form coming soon!')">✉️ Sign Up!</button>
   <div id="calendar"></div>
+  <img src="images/bottom.png" alt="" id="bottom-image">
 </div>
-<img src="images/bottom.png" alt="" id="bottom-image">
-<!--<img src="website_background.png" alt="" id="background-image">-->
 
-<div id="calendarModal" class="modal fade">
+<div id="calendarModal" class="modal fade" tabindex="-1">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span
-          class="sr-only">close</span></button>
-        <h4 id="modalTitle" class="modal-title"></h4>
-      </div>
-      <div id="modalBody" class="modal-body"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+    <div id="event-modal-content" class="modal-content"></div>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 
-<script src="eventsData.js"></script>
+<template id="event-modal-template">
+  <div class="modal-header">
+    <div><h5 id="modalTitle" class="modal-title">{{title}}</h5>
+      <div class="date-time">{{date}} • {{time}}</div>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div id="modalBody" class="modal-body">
+    <div class="d-flex justify-content-end mb-3">
+      {{#eventType}}<span class="badge bg-secondary ms-1">🎭 {{eventType}}</span>{{/eventType}}
+      {{#online}}<span class="badge bg-primary ms-1">💻 Online Event</span>{{/online}}
+    </div>
+
+    {{#location}}
+      <div class="mb-2">
+        {{#mapLink}}
+        <a href="{{mapLink}}" target="_blank" class="text-decoration-none">
+        {{/mapLink}}
+        <span class="location">📍 {{location}}{{#address}}<br/>{{address}}{{/address}}</span>
+        {{#mapLink}}
+        </a>
+        {{/mapLink}}
+      </div>
+    {{/location}}
+
+    {{#description}}
+      <div class="mb-4"><span>{{description}}</span></div>
+    {{/description}}
+    {{#event_website}}
+      <div class="mb-2"><a href="{{event_website}}" target="_blank" class="btn btn-outline-primary btn-sm">🌐 Event
+        Website</a></div>
+    {{/event_website}}
+
+  </div>
+
+</template>
+
 
 <script>
-  // ✅ Mock event data
-
   document.addEventListener('DOMContentLoaded', function () {
-    const calendarEl = document.getElementById('calendar');
-
-    const calendar = new FullCalendar.Calendar(calendarEl, {
+    const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
       themeSystem: 'bootstrap5',
-      initialView: 'dayGridMonth',
       height: 'auto',
-      events: window.eventsData.map(ev => ({title: ev.title, start: ev.start, extendedProps: {location: ev.location}})),
-      eventClick: function (info) {
-        document.getElementById('modalTitle').textContent = info.event.title;
-        document.getElementById('modalBody').textContent = info.event.extendedProps.location || '';
-        const modal = new bootstrap.Modal(document.getElementById('calendarModal'));
-        modal.show();
-      },
+      events: getEvents, // function to fetch events from Google Sheets
+      eventClick: openEventModal,
       customButtons: {
         prevHand: {
           text: '<<', click() {
             calendar.prev();
           }
-        }, nextHand: {
+        },
+        nextHand: {
           text: '>>', click() {
             calendar.next();
           }
-        },
+        }
+        ,
       },
-      headerToolbar: {left: 'prevHand', center: 'title', right: 'nextHand'},
     });
 
     calendar.render();
 
     function updateCalendarView() {
-      if (window.innerWidth < 1000) {
+      if (window.innerWidth < 992) {
         calendar.changeView('listMonth');
+        calendar.setOption('headerToolbar', {start: '', center: 'title', end: 'prevHand nextHand'});
       } else {
+        calendar.setOption('headerToolbar', {start: 'prevHand', center: 'title', end: 'nextHand'});
         calendar.changeView('dayGridMonth');
       }
     }
 
+    updateCalendarView();
     window.addEventListener('resize', updateCalendarView);
-  });
+  })
+
+  const openEventModal = function (info) {
+    const event = info.event;
+    const props = event.extendedProps;
+
+    // Prepare data for template
+    const data = {
+      title: event.title,
+      date: event.start.toLocaleDateString(),
+      time: event.allDay ? 'All day' :
+        event.start && event.end ?
+          `${event.start.toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit'
+          })} - ${event.end.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}` :
+          event.start ? event.start.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) : '',
+      location: props.location,
+      address: props.address,
+      online: props.online,
+      eventType: props.eventType,
+      description: props.description,
+      event_website: props.event_website,
+      mapLink: props.mapLink
+    };
+
+    // Render template
+    const template = document.getElementById('event-modal-template').innerHTML;
+    document.getElementById('event-modal-content').innerHTML = Mustache.render(template, data);
+
+    const modal = new bootstrap.Modal(document.getElementById('calendarModal'));
+    modal.show();
+  };
+
+  // Pull event data from Google Sheets CSV export
+  function getEvents(info, successCallback, failureCallback) {
+    let sheet = "https://docs.google.com/spreadsheets/d/12t8KGJtAxdoStRRCUGXPvZDbJGuxJ9j1j02irCR5isI";
+    const testSheet = "https://docs.google.com/spreadsheets/d/18uQTvIdS0VDxrJfadJIgpAatkoDRcs53_ZYdjzWRuBA"
+    const link = testSheet
+    fetch(`${link}/export?format=csv`)
+      .then(response => response.text())
+      .then(csv => {
+        if (!csv) {
+          failureCallback("No data");
+        }
+        Papa.parse(csv, {
+          header: true,
+          skipEmptyLines: true,
+          complete: function (results) {
+            const events = results.data.map(ev => mapRowToEvent(ev));
+            console.log("events", events);
+            successCallback(events);
+          }
+        });
+      });
+  }
+
+  // data is in the format
+  dataFormat = [
+    "Published?",
+    "Title",
+    "Short title (for print)",
+    "Date",
+    "Start time",
+    "End time",
+    "Event website",
+    "Location name",
+    "Map link",
+    "Location address",
+    "Online?",
+    "Event type",
+    "General link (performer, series, etc.)",
+    "Description"
+  ]
+
+
+  function toISO8601(dateStr, timeStr = "") {
+
+    if (!dateStr) return null;
+    // If no time, treat as all-day
+    if (!timeStr) return new Date(dateStr).toISOString().split('T')[0];
+
+    // Expect MM/DD/YYYY
+    const [month, day, year] = dateStr.split('/');
+
+    // Build a normalized string: "YYYY-MM-DD h:mm AM/PM"
+    const normalized = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}` +
+      (timeStr ? ` ${timeStr}` : "");
+
+    const date = new Date(normalized);
+    if (isNaN(date)) return null;
+
+    if (!timeStr) return date.toISOString().slice(0, 10);
+    return date.toISOString();
+  }
+
+  // Map a row to FullCalendar event object
+  function mapRowToEvent(row) {
+    const start = toISO8601(row['Date'], row['Start time']);
+    const end = toISO8601(row['Date'], row['End time']);
+    return {
+      title: row['Title'] || '',
+      start,
+      end: end || undefined,
+      allDay: !row['Start time'],
+      extendedProps: {
+        event_website: row['Event website'] || undefined,
+        location: row['Location name'] || '',
+        address: row['Location address'] || '',
+        online: row['Online?'] === 'TRUE',
+        eventType: row['Event type'] || '',
+        description: row['Description'] || '',
+        mapLink: row['Map link'] || '',
+        shortTitle: row['Short title (for print)'] || '',
+        generalLink: row['General link (performer, series, etc.)'] || '',
+        published: row['Published?'] === 'TRUE'
+      }
+    };
+  };
 </script>
 
 </body>
