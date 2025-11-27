@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,41 +23,53 @@
 </head>
 <body>
 
+<img src="images/header.png" alt="Yiddish & Klezmer in Boston - stylized header" id="header-image" role="img" aria-label="Yiddish & Klezmer in Boston header">
 
-<img src="images/header.png" alt="" id="header-image">
-<div id="left-side-flowers" class="side-flowers"></div>
-<div id="right-side-flowers" class="side-flowers"></div>
+<div id="left-butterfly" class="side-flowers" aria-hidden="true"></div>
+<div id="left-side-flowers" class="side-flowers" aria-hidden="true"></div>
+<div id="right-side-flowers" class="side-flowers" aria-hidden="true"></div>
+
 <div id="calendar-container">
-  <button class="signup-btn" onclick="alert('Signup form coming soon!')">✉️ Sign Up!</button>
-  <div id="calendar"></div>
-  <img src="images/bottom.png" alt="" id="bottom-image">
+  <button class="signup-btn" onclick="alert('Signup form coming soon!')" aria-label="Sign up for Yiddish & Klezmer event updates">✉️ Sign Up!</button>
+  <div id="calendar" aria-label="Yiddish & Klezmer Events Calendar"></div>
+  <div id="bottom-container"><img src="images/white_filled_bottom.png" alt="Folksy animals playing instruments" id="bottom-image" role="img" aria-label="Folksy animals playing instruments"></div>
 </div>
 
-<div id="calendarModal" class="modal fade" tabindex="-1">
-  <div class="modal-dialog">
+<div id="calendarModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+  <div class="modal-dialog" role="document">
     <div id="event-modal-content" class="modal-content"></div>
   </div>
 </div>
 
 <template id="event-modal-template">
   <div class="modal-header">
-    <div><h5 id="modalTitle" class="modal-title">{{title}}</h5>
+    <div>
+      <h5 id="modalTitle" class="modal-title">{{title}}</h5>
       <div class="date-time">{{date}} • {{time}}</div>
+      {{#event_website}}
+        <a href="{{event_website}}" target="_blank">🌐 Event Website</a>
+      {{/event_website}}
+
     </div>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close event details"></button>
   </div>
   <div id="modalBody" class="modal-body">
-    <div class="d-flex justify-content-end mb-3">
-      {{#eventType}}<span class="badge bg-secondary ms-1">🎭 {{eventType}}</span>{{/eventType}}
-      {{#online}}<span class="badge bg-primary ms-1">💻 Online Event</span>{{/online}}
-    </div>
+    <!--    currently removed tag section-->
+    <!--    <div class="d-flex justify-content-end mb-3">-->
+    <!--      {{#eventType}}<span class="badge bg-secondary ms-1">🎭 {{eventType}}</span>{{/eventType}}-->
+    <!--      {{#online}}<span class="badge bg-primary ms-1">💻 Online Event</span>{{/online}}-->
+    <!--    </div>-->
 
     {{#location}}
       <div class="mb-2">
         {{#mapLink}}
         <a href="{{mapLink}}" target="_blank" class="text-decoration-none">
         {{/mapLink}}
-        <span class="location">📍 {{location}}{{#address}}<br/>{{address}}{{/address}}</span>
+        <div class="d-flex">
+          <span class="me-2">📍</span>
+          <span class="location">{{location}}{{#address}}<br/>{{address}}{{/address}}</span>
+        </div>
+
         {{#mapLink}}
         </a>
         {{/mapLink}}
@@ -67,19 +79,15 @@
     {{#description}}
       <div class="mb-4"><span>{{description}}</span></div>
     {{/description}}
-    {{#event_website}}
-      <div class="mb-2"><a href="{{event_website}}" target="_blank" class="btn btn-outline-primary btn-sm">🌐 Event
-        Website</a></div>
-    {{/event_website}}
 
   </div>
 
 </template>
 
-<div id="debug-box">
+<div id="debug-box" aria-label="Debug options">
   <strong>Debug</strong><br>
-  <label><input type="checkbox" id="testData"> <a href="https://docs.google.com/spreadsheets/d/18uQTvIdS0VDxrJfadJIgpAatkoDRcs53_ZYdjzWRuBA/edit?gid=0#gid=0" target="_blank">Akiva's extra test data</a></label><br>
-  <label><input type="checkbox" id="publishedOnly"> Published events only</label>
+  <label for="testData"><input type="checkbox" id="testData"> Akiva's extra test data</label><br>
+  <label for="publishedOnly"><input type="checkbox" id="publishedOnly"> Published events only</label>
 </div>
 
 <script>
@@ -148,9 +156,23 @@
     // Render template
     const template = document.getElementById('event-modal-template').innerHTML;
     document.getElementById('event-modal-content').innerHTML = Mustache.render(template, data);
+    const link = document.querySelector('#event-modal-content a[href^="http"]');
+    if (link) {
+      try {
+        const url = new URL(link.href);
+        link.textContent = url.hostname.replace(/^www\./, '');
+      } catch (e) {
+        // fallback: leave as is
+      }
+    }
 
     const modal = new bootstrap.Modal(document.getElementById('calendarModal'));
     modal.show();
+
+    // Focus the modal title for screen readers
+    setTimeout(() => {
+      document.getElementById('modalTitle').focus();
+    }, 300);
   };
 
   // Pull event data from Google Sheets CSV export
@@ -167,28 +189,231 @@
 
   // Update getEvents to use these flags
   function getEvents(info, successCallback, failureCallback) {
-    const realSheet = "https://docs.google.com/spreadsheets/d/12t8KGJtAxdoStRRCUGXPvZDbJGuxJ9j1j02irCR5isI";
-    const testSheet = "https://docs.google.com/spreadsheets/d/18uQTvIdS0VDxrJfadJIgpAatkoDRcs53_ZYdjzWRuBA";
-    const link = useTestData ? testSheet : realSheet;
-    fetch(`${link}/export?format=csv`)
-      .then(response => response.text())
-      .then(csv => {
-        if (!csv) {
-          failureCallback("No data");
+    successCallback([
+      {
+        "title": "Di Nest: Yiddish Arts Incubator",
+        "start": "2025-12-01T00:30:00.000Z",
+        "end": "2025-12-01T02:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/di-nest-yiddish-arts-incubator-34/",
+          "location": "Boston Workers Circle",
+          "address": "6 Webster St, Brookline, MA 02446",
+          "mapLink": "https://maps.app.goo.gl/pJwGSKwzAGDqwbPq5",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "Description of di nest",
+          "shortTitle": "",
+          "generalLink": "google.com",
+          "published": false
         }
-        Papa.parse(csv, {
-          header: true,
-          skipEmptyLines: true,
-          complete: function (results) {
-            let events = results.data.map(ev => mapRowToEvent(ev));
-            if (publishedOnly) {
-              events = events.filter(ev => ev.extendedProps.published);
-            }
-            successCallback(events);
-          }
-        });
-      });
+      },
+      {
+        "title": "Yiddish Reading Group",
+        "start": "2025-11-07T15:30:00.000Z",
+        "end": "2025-11-07T17:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-reading-group-126/",
+          "location": "Boston Workers Circle",
+          "address": "6 Webster St, Brookline, MA 02446",
+          "mapLink": "https://maps.app.goo.gl/pJwGSKwzAGDqwbPq5",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "Yiddish Vinkl",
+        "start": "2025-11-08T00:00:00.000Z",
+        "end": "2025-11-08T01:30:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-vinkl-53/",
+          "location": "Somerville",
+          "address": "",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "mapLink": "",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "Di Nest: Yiddish Arts Incubator",
+        "start": "2025-12-05T00:30:00.000Z",
+        "end": "2025-12-05T02:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/di-nest-yiddish-arts-incubator-34/",
+          "location": "",
+          "address": "",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "Description of di nest",
+          "mapLink": "",
+          "shortTitle": "",
+          "generalLink": "google.com",
+          "published": false
+        }
+      },
+      {
+        "title": "Yiddish Reading Group",
+        "start": "2025-12-05T15:30:00.000Z",
+        "end": "2025-12-05T17:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-reading-group-126/",
+          "location": "",
+          "address": "",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "mapLink": "",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "Yiddish Vinkl",
+        "start": "2025-12-12T00:00:00.000Z",
+        "end": "2025-12-12T01:30:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-vinkl-53/",
+          "location": "Somerville",
+          "address": "",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "mapLink": "",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "Yiddish Reading Group",
+        "start": "2025-12-12T15:30:00.000Z",
+        "end": "2025-12-12T17:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-reading-group-127/",
+          "location": "",
+          "address": "",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "mapLink": "",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "farbreng:boston makhn zhetonen",
+        "start": "2025-12-13T20:00:00.000Z",
+        "end": "2025-12-13T22:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/farbrengboston-makhn-zhetonen/",
+          "location": "Boston Workers Circle",
+          "address": "6 Webster St, Brookline, MA 02446",
+          "online": false,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "mapLink": "",
+          "shortTitle": "Button making in Yiddish",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "Yiddish Sing",
+        "start": "2025-12-19T00:00:00.000Z",
+        "end": "2025-12-19T01:30:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-sing-23/",
+          "location": "Boston Workers Circle",
+          "address": "6 Webster St, Brookline, MA 02446",
+          "mapLink": "https://maps.app.goo.gl/pJwGSKwzAGDqwbPq5",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "Yiddish Reading Group",
+        "start": "2025-12-19T15:30:00.000Z",
+        "end": "2025-12-19T17:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-reading-group-128/",
+          "location": "",
+          "address": "",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "\"Lorem ipsum\" is a placeholder text used in graphic design and publishing to show the visual layout of a document before the final content is available. It is derived from a 1st-century BC Latin text by Cicero but has been altered to be nonsensical and not readable. Its primary purpose is to let designers and developers focus on layout, font, and typography without being distracted by meaningful content.  ",
+          "mapLink": "",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      },
+      {
+        "title": "Yiddish Reading Group",
+        "start": "2025-12-26T15:30:00.000Z",
+        "end": "2025-12-26T17:00:00.000Z",
+        "allDay": false,
+        "extendedProps": {
+          "event_website": "https://circleboston.org/event/yiddish-reading-group-129/",
+          "location": "",
+          "address": "",
+          "online": true,
+          "eventType": "Yiddish",
+          "description": "",
+          "mapLink": "",
+          "shortTitle": "",
+          "generalLink": "",
+          "published": false
+        }
+      }
+    ])
   }
+
+  // function getEvents(info, successCallback, failureCallback) {
+  //   const realSheet = "https://docs.google.com/spreadsheets/d/12t8KGJtAxdoStRRCUGXPvZDbJGuxJ9j1j02irCR5isI";
+  //   const testSheet = "https://docs.google.com/spreadsheets/d/18uQTvIdS0VDxrJfadJIgpAatkoDRcs53_ZYdjzWRuBA";
+  //   const link = useTestData ? testSheet : realSheet;
+  //   fetch(`${link}/export?format=csv`)
+  //     .then(response => response.text())
+  //     .then(csv => {
+  //       if (!csv) {
+  //         failureCallback("No data");
+  //       }
+  //       Papa.parse(csv, {
+  //         header: true,
+  //         skipEmptyLines: true,
+  //         complete: function (results) {
+  //           let events = results.data.map(ev => mapRowToEvent(ev));
+  //           if (publishedOnly) {
+  //             events = events.filter(ev => ev.extendedProps.published);
+  //           }
+  //           successCallback(events);
+  //         }
+  //       });
+  //     });
+  // }
 
   // data is in the format
   dataFormat = [
