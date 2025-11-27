@@ -1,11 +1,18 @@
+html {
+    font-size: 25px;
+}
+
 body {
-    font-family: "Helvetica Neue", sans-serif;
     margin: 0;
     background-color: #fdf6e3;
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    font-family: "Caveat Brush", cursive;
+    --bs-body-font-family: "Edu NSW ACT Foundation", cursive;
+    min-height: 100vh;
 }
 
 header {
@@ -22,7 +29,6 @@ header h1 {
 }
 
 .signup-btn {
-    background-color: #e63946;
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
@@ -30,10 +36,11 @@ header h1 {
     font-size: 1.2rem;
     cursor: pointer;
     font-family: 'Comic Sans MS', 'Patrick Hand', cursive;
+    background-color: #c37d11;
 }
 
 .signup-btn:hover {
-    background-color: #d62828;
+    background-color: #d28c20;
 }
 
 .fc {
@@ -41,17 +48,15 @@ header h1 {
     --bs-link-color-rgb: white;
     --fc-button-hover-border-color: black;
 
-    --fc-small-font-size: .85em;
+    --fc-small-font-size: 1em;
     --fc-page-bg-color: #fff;
-    --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+    --fc-neutral-bg-color: white; /* changed */
     --fc-neutral-text-color: #808080;
     --fc-border-color: black;
 
     --fc-button-text-color: #fff;
-    --fc-button-bg-color: #2C3E50;
     --fc-button-border-color: black;
     --fc-button-hover-bg-color: #1e2b37;
-    --fc-button-hover-border-color: black;
     --fc-button-active-bg-color: #1a252f;
     --fc-button-active-border-color: black;
 
@@ -71,19 +76,27 @@ header h1 {
     --fc-bg-event-color: rgb(143, 223, 130);
     --fc-bg-event-opacity: 0.3;
     --fc-highlight-color: rgba(188, 232, 241, 0.3);
-    --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+    --fc-today-bg-color: #fff3e7;
     --fc-now-indicator-color: red;
 
 
     /* FullCalendar grid: black background, thick black borders */
 
+    .fc-daygrid-day-frame {
+        min-height: 200px;
+        height: 100%;
+    }
+
+    .fc-daygrid-dot-event.fc-event-mirror, .fc-daygrid-dot-event:hover {
+        background-color: white;
+        border-radius: 5px;
+        color: #05868a;
+    }
+
     .fc-daygrid-day, .fc-daygrid-day-frame {
         border: 3px solid black;
     }
 
-    table.fc-scrollgrid {
-        border-right-width: -1px;
-    }
 
     .fc-daygrid-day-number {
         color: black;
@@ -98,12 +111,13 @@ header h1 {
         padding: 0.5rem;
         justify-content: center;
         flex-wrap: wrap;
+        border-radius: 10px 10px 0 0; /* rounded top corners */
 
         .fc-toolbar-title {
             /*the month title*/
             color: white;
             font-family: "Caveat Brush", cursive;
-            font-size: 4rem;
+            font-size: 3rem;
             text-align: center;
             @media (max-width: 992px) {
                 font-size: 3rem;
@@ -118,10 +132,17 @@ header h1 {
             background: black;
             color: white;
             margin: 0 20px;
+            font-family: "Caveat Brush", cursive;
+            font-size: 2rem;
 
             &:hover {
                 background: black;
                 border-color: white;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 1.3rem;
+                margin: 0 10px;
             }
         }
 
@@ -142,12 +163,21 @@ header h1 {
         /* day of week names */
         color: white;
         font-family: "Caveat Brush", cursive;
+        font-size: 1.5rem;
+
+        a:hover {
+            color: white;
+        }
 
         a {
             text-decoration: none;
         }
 
         background: black;
+    }
+
+    .fc-view-harness {
+        /*border-radius: 0 0 10px 10px; !* rounded bottom corners *! doesn't work*/
     }
 
     /*make events fit better by removing the dot and allowing it to wrap*/
@@ -167,6 +197,10 @@ header h1 {
             text-align: left;
             white-space: normal;
         }
+
+        .fc-event-time {
+            font-size: .8em;
+        }
     }
 
 }
@@ -176,13 +210,11 @@ header h1 {
     /* Ensure table fits and columns respect widths */
     .fc .fc-list-table {
         width: 100%;
-        /*table-layout: fixed;*/
         box-sizing: border-box;
     }
 
     td {
         /*width: 50% !important; doesn't work */
-        font-size: 0.8rem;
         white-space: wrap !important;
     }
 
@@ -222,34 +254,51 @@ header h1 {
 }
 
 #calendarModal {
+    a {
+        color: #05868a
+    }
+
     .date-time {
         font-size: .9rem;
     }
 
     .location {
         font-size: .9rem;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
     }
 }
 
 .side-flowers {
-    position: fixed;
+    position: absolute;
     top: 0;
+    bottom: 0;
     height: 100%;
     width: 20%;
-    max-width: 150px;
+    max-width: 220px;
     background-repeat: repeat-y;
     background-position: center top;
-    background-size: 100% auto; /* or use cover for full coverage */
+    background-size: 100% auto;
     z-index: -1;
 }
+
 
 #left-side-flowers {
     background-image: url('images/sides-left.png');
     left: 0;
+    top: 90px;
+    height: calc(100% - 90px);
+}
+
+#left-butterfly {
+    top: 10px;
+    left: 0;
+    background: url('images/left-butterfly.png') no-repeat center top / contain;
 }
 
 #right-side-flowers {
     background-image: url('images/sides-right.png');
+    background-position: center;
     right: 0;
 }
 
@@ -261,7 +310,7 @@ header h1 {
 
 #calendar-container {
     position: relative;
-    width: calc(100% - min(300px, 20% * 2)); /* account for side flowers */
+    width: calc(100% - min(160px, 30%)); /* account for side flowers */
 
     .signup-btn {
         display: block;
@@ -272,11 +321,26 @@ header h1 {
         margin: 1rem auto;
         z-index: 1;
         position: relative;
-    }
+        background: white;
 
+        &::after {
+            /*ugly hack to remove weird white line on the right and have a nice border radius*/
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            border: 5px solid black;
+            border-radius: 10px;
+            z-index: 99;
+            pointer-events: none;
+        }
+    }
+    #bottom-container {height: 100% }
     #bottom-image {
-        width: 110%;
-        max-width: 1200px;
+        width: 70%;
+        max-width: 1000px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
@@ -290,19 +354,19 @@ header h1 {
 }
 
 
-
 #debug-box {
     position: fixed;
     top: 16px;
     right: 16px;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid #333;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     padding: 12px 16px;
     z-index: 1000;
     font-size: 1rem;
 }
+
 #debug-box label {
     display: block;
     margin-bottom: 4px;
